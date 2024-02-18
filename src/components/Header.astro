@@ -1,0 +1,92 @@
+---
+import Access from "./Access.astro";
+import ButtonAccess from "./blocks/ButtonAccess.astro";
+import ButtonAccessSecondary from "./blocks/ButtonAccessSecondary.astro";
+import Logo from "./Logo.astro";
+---
+
+<div
+	class="sticky top-0 z-40 bg-white w-full"
+>
+		<header
+			class="max-w-7xl mx-auto px-6 md:px-12 lg:px-6 flex flex-col lg:flex-row items-center justify-between gap-6 py-4"
+		>
+			<input
+				aria-hidden="true"
+				type="checkbox"
+				name="toggle_nav"
+				id="toggle_nav"
+				class="hidden peer"
+			/>
+
+			<div
+				class="relative z-20 w-full lg:w-fit flex justify-between items-center"
+			>
+				<Logo />
+				<div class="flex flex-row gap-4 lg:hidden">
+					<ButtonAccess href="/">Probalo por 15 días</ButtonAccess>
+
+					<div class="relative flex items-center max-h-10">
+						<label
+							role="button"
+							for="toggle_nav"
+							aria-label="Menu expand button"
+							id="hamburger"
+							class="relative"
+						>
+						<div
+							aria-hidden="true"
+							id="line"
+							class="h-1 w-5 rounded bg-orange-500 transition duration-300"
+						>
+						</div>
+						<div
+							aria-hidden="true"
+							id="line2"
+							class="mt-1 h-1 w-6 rounded bg-orange-500 transition duration-300"
+						>
+						</div>
+							<div
+								aria-hidden="true"
+								id="line3"
+								class="mt-1 h-1 w-5 rounded bg-orange-500 transition duration-300"
+							>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div
+				aria-hidden="true"
+				class="fixed z-10 inset-0 h-screen w-screen backdrop-blur-2xl origin-bottom scale-y-0 transition duration-500 peer-checked:origin-top peer-checked:scale-y-100 lg:hidden"
+			>
+			</div>
+
+			<div class="z-20 absolute
+				items-center  w-full lg:w-fit invisible lg:visible
+				peer-checked:visible opacity-0 lg:opacity-100 peer-checked:opacity-100
+				top-full scale-95 origin-top transition-all duration-300
+				lg:relative lg:scale-100 peer-checked:scale-100
+				"
+			>
+				<div class="flex flex-col lg:flex-row gap-4 items-center">
+					<Access/>
+					<ButtonAccess href="/">Probalo por 15 días</ButtonAccess>
+				</div>
+			</div>
+		</header>
+</div>
+
+<style>
+	#toggle_nav:checked ~ div #hamburger #line {
+		@apply rotate-45 translate-y-2;
+	}
+	#toggle_nav:checked ~ div #hamburger #line2 {
+		@apply opacity-0 ;
+	}
+
+	#toggle_nav:checked ~ div #hamburger #line3 {
+		@apply -rotate-45 -translate-y-2;
+	}
+</style>

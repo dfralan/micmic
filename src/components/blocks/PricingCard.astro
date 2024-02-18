@@ -1,0 +1,97 @@
+---
+import FeatureLine from "./FeatureLine.astro";
+import ButtonAccess from "./ButtonAccess.astro";
+import ButtonAccessSecondary from "./ButtonAccessSecondary.astro";
+interface Props {
+    title: string;
+    label?: string;
+    subtitle: string;
+
+    pricing: {
+        price: string;
+        currency: string;
+        interval: string;
+    };
+    planFeatures: {
+        content: string;
+        check: boolean;
+    }[];
+    callToAction: {
+        content: string;
+        href: string;
+        target: string;
+        customClass?: string;
+    };
+}
+
+const { title, label, subtitle, pricing, planFeatures, callToAction } =
+    Astro.props;
+---
+
+<div class="bg-white p-8 flex flex-col gap-4 border overflow-hidden w-full lg:w-1/3 rounded-2xl border animate animation-smooth">
+    
+        <div class="flex flex-row justify-between items-center">
+            
+            {
+                label ? 
+                <h1 class="text-2xl font-semibold">
+                {title}
+            </h1>
+                <p class="text-sm bg-black rounded-full px-2 py-1 flex justify-center items-center text-center text-xs font-semibold text-white">
+                    {label}
+                </p> :
+
+                <h1 class="text-2xl font-semibold">
+                {title}
+            </h1>
+                
+            }
+        </div>
+        <p class="text-gray-600">{subtitle}</p>
+        <div class="flex flex-row gap-2">
+            <h1 class="font-bold text-3xl w-full">
+                {pricing.price}<span>{pricing.currency}</span>
+                <span class="font-light text-gray-600 text-xl">{pricing.interval}</span>
+            </h1>
+            
+        </div>
+        <ul>
+            {
+                planFeatures.map((feature) => (
+                    <li>
+                        <FeatureLine
+                            content={feature.content}
+                            check={feature.check}
+                        />
+                    </li>
+                ))
+            }
+        </ul>
+        <div class="h-full flex justify-end items-end">
+            {
+                label ? (
+                    <ButtonAccess
+                        href={callToAction.href}
+                        target={callToAction.target}
+                        class:list={[
+                            "text-xl w-full text-center mx-auto mt-4",
+                            callToAction.customClass,
+                        ]}
+                    >
+                        {callToAction.content}
+                    </ButtonAccess>
+                ) : (
+                    <ButtonAccessSecondary
+                        href={callToAction.href}
+                        target={callToAction.target}
+                        class:list={[
+                            "text-xl w-full text-center mx-auto mt-4",
+                            callToAction.customClass,
+                        ]}
+                    >
+                        {callToAction.content}
+                    </ButtonAccessSecondary>
+                )
+            }
+        </div>
+</div>

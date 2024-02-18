@@ -1,0 +1,37 @@
+---
+
+interface Props {
+	title: string;
+	subtitle: string;
+    featureClass: string;
+    imageA: {
+        alt: string;
+        src: string;
+        customClass: string
+    }
+    imageB: {
+        alt: string;
+        src: string;
+        customClass: string
+    }
+
+}
+
+const { title, subtitle, featureClass, imageA, imageB} = Astro.props;
+const defaultFeatureClass = "flex flex-col max-w-5xl mx-auto items-center text-center md:text-start"
+---
+
+<div class:list={[defaultFeatureClass, featureClass]}>
+    <div class="md:w-1/2 flex flex-col gap-3">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900">
+            {title}
+        </h1>
+        <p class="text-xl text-gray-800">
+            {subtitle}
+        </p>
+    </div>
+    <div class="mx-12 md:mx-6 md:w-1/2 relative">
+        <img class:list={imageA.customClass} src={imageA.src} alt="">
+        <img class:list={imageB.customClass} src={imageB.src} alt="">
+    </div>
+</div>

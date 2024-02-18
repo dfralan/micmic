@@ -1,0 +1,39 @@
+---
+import Container from "./blocks/Container.astro";
+import PricingCard from "./blocks/PricingCard.astro";
+import plans from "../assets/plans";
+
+const allPlans = plans.map((plan) => ({
+
+	title: plan.title,
+	label: plan.label,
+	subtitle: plan.subtitle,
+	pricing: plan.pricing,
+	planFeatures: plan.planFeatures,
+	callToAction: plan.callToAction
+
+}));
+---
+
+<Container id="pricing" customClass="justify-center items-center flex flex-col gap-12">
+	<h1
+		class="text-5xl md:w-2/3 text-center font-semibold text-gray-900 w-full"
+	>
+		Paga sólo por lo que necesites.
+	</h1>
+	<div class="flex flex-col lg:flex-row gap-12 w-full">
+		{
+			allPlans.map((plan) => (
+			<PricingCard
+			title={plan.title}
+			label={plan.label}
+			subtitle={plan.subtitle}
+			pricing={plan.pricing}
+			planFeatures={plan.planFeatures}
+			callToAction={plan.callToAction}
+		/>
+			))
+		}
+		
+	</div>
+</Container>

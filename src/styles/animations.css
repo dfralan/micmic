@@ -1,0 +1,68 @@
+.animation-smooth {
+    animation-duration: 0.5s;
+  }
+  
+  .animation-fast {
+    animation-duration: .2s;
+  }
+  
+  .animate {
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  .draw {
+    opacity: 1 !important;
+    clip-path: inset(0 100% 0 0);
+    animation-fill-mode: forwards;
+    animation-name: draw !important;
+  }
+  
+  .appear {
+    animation-name: appear;
+  }
+  
+  .disappear {
+    animation-name: disappear;
+  }
+  
+  .hideOnHover:hover {
+    animation-name: disappear;
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes disappear {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  }
+  
+  
+  @keyframes draw {
+    from {
+      clip-path: inset(0 100% 0 0);
+      /* Start from 0 width */
+    }
+  
+    to {
+      clip-path: inset(0 0 0 0);
+      /* End with full width */
+    }
+  }

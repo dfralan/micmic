@@ -1,0 +1,31 @@
+---
+import Container from "./blocks/Container.astro";
+import Access from "./Access.astro";
+const today = new Date();
+import { SITE_TITLE } from "../consts";
+---
+
+<footer class="bg-black">
+	<Container customClass="justify-center items-center flex flex-col gap-6">
+		<div class="flex flex-wrap gap-6">
+			<Access />
+		</div>
+		<p class="w-full text-center text-gray-300 text-sm max-w-4xl">
+			&copy; {today.getFullYear()}
+			{" " + SITE_TITLE}. Reservados todos los derechos. "micmic Partner"
+			y "micmic Delivery" es un servicio ofrecido por Logic Omnipresence a
+			través de micmic.shop y no constituye una marca registrada
+			independiente ni representa una entidad legal separada.
+		</p>
+		<a
+			href="https://getloom.co"
+			class="flex text-white flex-row gap-1 items-center"
+		>
+			Powered by
+			<div class="h-3 w-3 bg-blue-500 rounded-full"></div>
+			<span class="font-logic">
+				<b>Logic</b>Omnipresence
+			</span>
+		</a>
+	</Container>
+</footer>

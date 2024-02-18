@@ -1,0 +1,25 @@
+---
+import Container from './blocks/Container.astro';
+import ButtonAccess from './blocks/ButtonAccess.astro';
+import ButtonAccessSecondary from './blocks/ButtonAccessSecondary.astro';
+---
+<Container>
+<div class="flex flex-col md:flex-row max-w-5xl mx-auto items-center gap-12">
+    <div class="md:w-1/2 flex flex-col gap-3">
+        <h1 class="text-5xl font-semibold text-gray-900">
+            Lleva tu negocio al siguiente nivel con <span class="font-brand font-bold text-orange-500">micmic</span>
+        </h1>
+        <p class="text-xl text-gray-800">
+            Somos el aliado ideal para tu local gastronómico u hotelero, haciendo tu día a día más fácil.
+        </p>
+        <div class="flex flex-wrap gap-3">
+            <ButtonAccess href="/" class:list={"text-xl"}>Empezar ahora</ButtonAccess>
+			<ButtonAccessSecondary href="/" class:list={"text-xl"}>Ver video</ButtonAccess>
+        </div>
+    </div>
+    <div class="md:w-1/2 relative">
+        <img class="animate animation-smooth" src="/img/main-hero-phone.png" alt="">
+        <img class="absolute top-0 animate animation-fast" src="/img/main-hero-qr.png" alt="">
+    </div>
+</div>
+</Container>
