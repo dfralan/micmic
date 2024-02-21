@@ -27,6 +27,6 @@ export default [
   {
     question: "¿Donde envío los archivos para el menú?",
     answer:
-      `Enviá tus archivos a <span class='underline text-orange-500' href=">global@yendo.delivery"</span> especificando especificando nombre de usario.`,
+      `Enviá tus archivos a <span class='underline text-orange-500' href=">global@yendo.delivery"</span> especificando nombre de usario.`,
   },
 ];
