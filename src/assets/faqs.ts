@@ -24,4 +24,9 @@ export default [
     answer:
       `Viví la experiencia de usuario en <a class='underline text-orange-500' href="https://yendo.delivery/partner/demo">micmic.shop/partner/Burguer-Queen-Demo.</a>`,
   },
+  {
+    question: "¿Donde envío los archivos para el menú?",
+    answer:
+      `Enviá tus archivos a <span class='underline text-orange-500' href=">global@yendo.delivery"</span> especificando especificando nombre de usario.`,
+  },
 ];
