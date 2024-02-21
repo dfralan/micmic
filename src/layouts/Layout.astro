@@ -53,7 +53,7 @@ const { description, title, image, themeSelector } = Astro.props;
 		<meta property="twitter:url" content={Astro.url} />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta property="twitter:image" content={new URL(image, Astro.url)} />
+		<meta property="twitter:image" content={image} />
 
 		<!-- Google / Search Engine Tags -->
 		<meta itemprop="name" content={title} />
@@ -71,7 +71,7 @@ const { description, title, image, themeSelector } = Astro.props;
 	</head>
 
 	<body class="bg-gray-white">
-		<Header themeSelector={themeSelector}/>
+		<Header />
 		<slot />
 		<Footer />
 	</body>
