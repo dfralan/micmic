@@ -114,7 +114,7 @@ export default [
     ],
     callToAction: {
       content: "Contactar con ventas",
-      href: "https://wa.me/5493412293515?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20Empresas%20de%20micmic",
+      href: "https://api.whatsapp.com/send?phone=5493412293515&text=Hola,%20estoy%20interesado%20en%20el%20Plan%20Empresas%20de%20micmic.",
       target: "_blank"
     },
   },
