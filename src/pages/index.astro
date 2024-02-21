@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Load from '../components/Load.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const meta = {
@@ -11,11 +12,11 @@ const meta = {
 <Layout
 	title={SITE_TITLE}
 	description={SITE_DESCRIPTION}
-	image=''
+	image='/img/link-img.jpg'
     meta={[meta]}
 	>
 	<main>
-		
+	<Load />
 	</main>
 </Layout>
 
