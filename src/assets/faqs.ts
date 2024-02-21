@@ -19,4 +19,9 @@ export default [
     answer:
       "Sí, puedes cambiar de un plan a otro en cualquier momento según tus necesidades y preferencias. Solo ponte en contacto con nuestro equipo de atención al cliente y estaremos encantados de ayudarte a hacer la transición al plan que mejor se adapte a tus requerimientos.",
   },
+  {
+    question: "¿Puedo ver una tienda de ejemplo?",
+    answer:
+      `Viví la experiencia de usuario en <a class='underline text-orange-500' href="https://yendo.delivery/partner/demo">micmic.shop/partner/Burguer-Queen-Demo.</a>`,
+  },
 ];
