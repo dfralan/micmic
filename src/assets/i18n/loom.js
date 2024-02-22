@@ -172,7 +172,7 @@ import loomTranslations from '/src/assets/i18n/loomTranslations.js';
 
                 // Before 
                 function putContent(a, b) {
-                    if (a.classList.contains("fill-as-inner"))  {
+                    if (!(a.classList.contains("fill-as-inner")))  {
                         a.innerHTML = b
                     } else {
                         a.textContent = b;

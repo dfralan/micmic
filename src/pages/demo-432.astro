@@ -1,0 +1,22 @@
+---
+import StoreLayout from '../layouts/StoreLayout.astro';
+import DemoPreview from '../components/DemoPreview.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const meta = {
+    "http-equiv": "refresh",
+    content: "20000; url=/partner",
+};
+---
+
+<StoreLayout
+	title={SITE_TITLE}
+	description={SITE_DESCRIPTION}
+	image='https://micmic.shop/img/link-img.jpg'
+    meta={[meta]}
+	>
+	<main>
+		<DemoPreview />
+	</main>
+</StoreLayout>
+
