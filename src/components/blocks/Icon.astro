@@ -1,14 +1,13 @@
 ---
-import _icons from "../../assets/icons";
+import icons from "../../assets/icons";
 
 interface Props {
-    name: string;
+    name: keyof typeof icons;
     size?: string;
     customClass?: string;
 }
 
 const { name, size, customClass } = Astro.props;
-const icons :any=_icons;
 ---
 
 <svg
