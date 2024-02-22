@@ -1,6 +1,6 @@
 export default [
     {
-      title: "Organizá tu carta",
+      title: "Organizá tus productos",
       subtitle: "No más etiquetas de precios de forma desordenada. Cambiá precios, nombres de productos, descripciones, y visualizá los cambios instantáneamente.",
       imgA: {
         src: "/img/qr-micmic.png",

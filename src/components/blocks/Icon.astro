@@ -1,0 +1,19 @@
+---
+import icons from "../../assets/icons";
+
+interface Props {
+    name: string;
+    size?: string;
+    customClass?: string;
+}
+
+const { name, size, customClass } = Astro.props;
+---
+
+<svg
+    class={customClass ? customClass : ""}
+    xmlns="http://www.w3.org/2000/svg"
+    height={size ? size : "24"}
+    width={size ? size : "24"}
+    viewBox="0 -960 960 960"><path d={icons[name]}></path>
+</svg>
