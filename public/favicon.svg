@@ -4,7 +4,7 @@
 <style>
     .logo-box { fill: #F97316; }
     @media (prefers-color-scheme: dark) {
-        path { fill: #F97316; }
+        .logo-box { fill: #F97316; }
     }
 </style>
 </svg>
