@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 import auth from 'auth-astro';
 
 export default defineConfig({
-  integrations: [auth(), tailwind()],
+  integrations: [tailwind()],
   output: 'server',
   adapter: cloudflare(),
 });
