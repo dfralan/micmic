@@ -1,0 +1,54 @@
+---
+import pp from "../assets/privacy";
+import Container from './blocks/Container.astro';
+---
+
+
+<Container id="faqs">
+    <div class="mt-12 md:mt-20 flex flex-col gap-12 lg:flex-row">
+        <div class="text-center lg:w-5/12 lg:pl-12 lg:text-left">
+            <h2
+                class="text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl"
+            >
+                {pp.name}
+            </h2>
+            <p
+                class="mt-4 text-gray-600"
+                
+            >
+            {pp.description}
+            </p>
+        </div>
+        {
+            <div
+                class="fill-as-inner flex flex-col gap-3 lg:w-7/12" loom={pp.content}
+            >
+                
+                    
+                        {pp.content}
+                
+            </div>
+        }
+    </div>
+</Container>
+<script is:inline>
+    const e = document.querySelectorAll(".faq");
+    for (let t = 0; t < e.length; t++) {
+        const a = e[t].querySelector(".faq-answer"),
+            o = e[t].querySelector(".arrow-down");
+        e[t].addEventListener("click", () => {
+            for (let r = 0; r < e.length; r++) {
+                const s = e[r].querySelector(".faq-answer"),
+                    l = e[r].querySelector(".arrow-down");
+                e[t] != e[r] &&
+                    ((s.style.maxHeight = "0px"),
+                    l.classList.replace("rotate-180", "rotate-0"));
+            }
+            o.classList.contains("rotate-180")
+                ? ((a.style.maxHeight = 0 + "px"),
+                  o.classList.replace("rotate-180", "rotate-0"))
+                : ((a.style.maxHeight = a.scrollHeight + "px"),
+                  o.classList.replace("rotate-0", "rotate-180"));
+        });
+    }
+</script>
