@@ -7,4 +7,12 @@ export default defineConfig({
   integrations: [tailwind(), auth()],
   output: 'server',
   adapter: cloudflare(),
+  image: {
+    service: {
+       entrypoint: 'astro/assets/services/sharp',
+       config: {
+         limitInputPixels: false,
+      },
+     },
+  },
 });
