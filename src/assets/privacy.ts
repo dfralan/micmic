@@ -32,7 +32,7 @@ export default
     <h2 class='text-xl'>6. Cambios en la Política de Privacidad:</h2>
     <p>Nos reservamos el derecho de actualizar o modificar esta Política de Privacidad en cualquier momento. Le notificaremos cualquier cambio significativo mediante una notificación en nuestro sitio web o por correo electrónico antes de que el cambio entre en vigencia.</p>
     <h2 class='text-xl'>7. Contacto:</h2>
-    <p>Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad, puede ponerse en contacto con nosotros a través de [correo electrónico de contacto].</p>
+    <p>Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad, puede ponerse en contacto con nosotros a través de <a class='underline text-orange-500' href="mailto:global@micmic.shop">global@micmic.shop</a>.</p>
     <p>Al utilizar micmic.shop, usted acepta los términos de esta Política de Privacidad.</p>
 `
   }
