@@ -1,10 +1,10 @@
 ---
-import icons from "../../assets/icons";
+import { icons } from "../../assets/icons";
 
 interface Props {
-    name: keyof typeof icons;
-    size?: string;
-    customClass?: string;
+	name: string;
+	size?: string;
+	customClass?: string;
 }
 
 const { name, size, customClass } = Astro.props;
