@@ -5,6 +5,7 @@ import ButtonAccessSecondary from "./blocks/ButtonAccessSecondary.astro";
 import Logo from "./Logo.astro";
 import loomies from "../assets/i18n/en.json";
 import LangSelector from "./LanguageSelector.astro";
+import {SignIn} from "auth-astro/components"
 ---
 
 <div
@@ -73,6 +74,7 @@ import LangSelector from "./LanguageSelector.astro";
 				"
 			>
 				<div class="flex flex-col lg:flex-row gap-4 items-center">
+					<SignIn provider={"google"}>Ingresá con Google</SignIn>
 					<LangSelector />
 					<Access/>
 					<ButtonAccess target={"_blank"} href="https://api.whatsapp.com/send?phone=5493412293515&text=Quiero%20probar%20micmic%20por%2015%20d%C3%ADas.">Probalo por 15 días</ButtonAccess>
