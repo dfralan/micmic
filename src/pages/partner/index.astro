@@ -7,6 +7,7 @@ import Features from '../../components/Features.astro';
 import Pricing from '../../components/Pricing.astro';
 import FAQ from '../../components/FAQ.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import {SignIn} from "auth-astro/components"
 ---
 
 <Layout
@@ -16,6 +17,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 	>
 	<main>
 		<Hero />
+		<SignIn provider={"google"}>Ingresá con Google</SignIn>
 		<Features />
 		<Pricing />
 		<FlagCTA />

@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ConditionsBlock from '../components/Conditions.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<Layout
+	title={SITE_TITLE}
+	description={SITE_DESCRIPTION}
+	image='https://micmic.shop/img/link-img.jpg'
+	>
+	<main>
+		<ConditionsBlock />
+	</main>
+</Layout>
+
