@@ -1,18 +1,18 @@
 import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify';
 import tailwind from "@astrojs/tailwind";
-import { loadEnv } from 'vite';
+const GoogleID = import.meta.env.GOOGLE_ID;
+const GoogleSecret = import.meta.env.GOOGLE_SECRET;
 import auth from 'auth-astro';
 import Google from "@auth/core/providers/google"
-const env = loadEnv('production', process.cwd(), '');
 
 export default defineConfig({
   integrations: [tailwind(),
   auth({
     providers: [
       Google({
-        clientId: env.GOOGLE_ID,
-        clientSecret: env.GOOGLE_SECRET
+        clientId: GoogleID,
+        clientSecret: GoogleSecret
       })
     ]
   })
