@@ -1,14 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SignIn, SignOut } from 'auth-astro/components'
 ---
 <Layout
     title={SITE_TITLE}
 	description={SITE_DESCRIPTION}
 	image='https://micmic.shop/img/link-img.jpg'
 >
-  <button id="login">Login</button>
-  <button id="logout">Logout</button>
+<SignIn provider="google" />
 
   <script>
     const { signIn, signOut } = await import("auth-astro/client")
