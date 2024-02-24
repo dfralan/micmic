@@ -2,14 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { SignIn } from 'auth-astro/components'
+const values = import.meta.env.some_value
 ---
 <Layout
     title={SITE_TITLE}
 	description={SITE_DESCRIPTION}
 	image='https://micmic.shop/img/link-img.jpg'
 >
-<SignIn provider="Google">Google LOGIN</SignIn>
+<SignIn provider="Google">Google LOGIN {values}</SignIn>
 </Layout>
-<script>
-	console.log(import.meta.env.PUBLIC_TEST_SECRET)
-</script>
