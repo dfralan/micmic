@@ -1,5 +1,5 @@
+import Google from '@auth/core/providers/google';
 import { defineConfig } from 'auth-astro';
-import Google from "@auth/core/providers/google"
 
 export default defineConfig({
   providers: [
