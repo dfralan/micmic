@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Lost from '../components/Lost.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+<Layout
+    title={SITE_TITLE}
+	description={SITE_DESCRIPTION}
+	image='https://micmic.shop/img/link-img.jpg'
+>
+  <button id="login">Login</button>
+  <button id="logout">Logout</button>
+
+  <script>
+    const { signIn, signOut } = await import("auth-astro/client")
+    const loginButton = document.querySelector("#login") as HTMLButtonElement;
+const logoutButton = document.querySelector("#logout") as HTMLButtonElement;
+
+if (loginButton) {
+  loginButton.onclick = () => signIn("github");
+}
+
+if (logoutButton) {
+  logoutButton.onclick = () => signOut();
+}
+  </script>
+</Layout>
