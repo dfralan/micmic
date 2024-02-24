@@ -74,23 +74,14 @@ import LangSelector from "./LanguageSelector.astro";
 				"
 			>
 				<div class="flex flex-col lg:flex-row gap-4 items-center">
-					<!-- <SignIn provider={"google"}>Ingresá con Google</SignIn> -->
-					<button id="login">Login</button>
-  					<button id="logout">Logout</button>
+					
 					<LangSelector />
 					<Access/>
 					<ButtonAccess target={"_blank"} href="https://api.whatsapp.com/send?phone=5493412293515&text=Quiero%20probar%20micmic%20por%2015%20d%C3%ADas.">Probalo por 15 días</ButtonAccess>
 				</div>
-				
 			</div>
 		</header>
 </div>
-
-<script >
-    const { signIn, signOut } = await import("auth-astro/client")
-    document.querySelector("#login").onclick = () => signIn("github")
-    document.querySelector("#logout").onclick = () => signOut()
-  </script>
 
 <style>
 	#toggle_nav:checked ~ div #hamburger #line {
