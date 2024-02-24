@@ -4,7 +4,7 @@ import type { HTMLAttributes } from 'astro/types';
 type Props = HTMLAttributes<'a'>;
 
 const { href, class: className, ...props } = Astro.props;
-const defaultClass = "bg-orange-400 hover:bg-orange-500 text-white py-2 px-4 rounded-xl transition-all duration-300"
+const defaultClass = " bg-orange-400 hover:bg-orange-500 text-white py-2 px-4 rounded-xl transition-all duration-300"
 
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^\/]+/g);

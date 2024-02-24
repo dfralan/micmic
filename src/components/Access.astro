@@ -1,12 +1,12 @@
 ---
 import HeaderLink from "./blocks/HeaderLink.astro";
-import { SignIn } from 'auth-astro/components'
 ---
-
 
 <HeaderLink href="/partner">Home</HeaderLink>
 <HeaderLink href="/partner#features">Beneficios</HeaderLink>
 <HeaderLink href="/partner#pricing">Precios</HeaderLink>
 <HeaderLink href="/partner#faqs">Preguntas frecuentes</HeaderLink>
 <HeaderLink href="/privacy">Políticas de Privacidad</HeaderLink>
-<SignIn provider="Google" class:list={'hidden'}>Login</SignIn>
+<div class="flex w-fit h-fit hidden g-button-container  rounded-xl overflow-hidden border border-gray-400 hover:shadow">
+    <div style="text-2xl" class="g-signin2" data-onsuccess="onSignIn"></div>
+</div>
