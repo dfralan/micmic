@@ -3,3 +3,5 @@
 
 export const SITE_TITLE = 'micmic';
 export const SITE_DESCRIPTION = 'Tu socio ideal';
+export const GOOGLE_EMAIL = 'micmicpartner@gmail.com';
+export const BUSSINESS_EMAIL = 'global@micmic.shop';
