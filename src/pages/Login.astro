@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { SignIn, SignOut } from 'auth-astro/components'
+import { SignIn } from 'auth-astro/components'
 ---
 <Layout
     title={SITE_TITLE}
 	description={SITE_DESCRIPTION}
 	image='https://micmic.shop/img/link-img.jpg'
 >
-<SignIn provider="google" >Google LOGIN</SignIn>
+<SignIn provider="Google">Google LOGIN</SignIn>
 </Layout>
