@@ -2,10 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Load from '../components/Load.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getSession } from 'auth-astro/server';
+const session = await getSession(Astro.request);
 
 const meta = {
     "http-equiv": "refresh",
-    content: "2; url=/partner",
+    content: "2000; url=/partner",
 };
 ---
 
@@ -16,6 +18,13 @@ const meta = {
     meta={[meta]}
 	>
 	<main>
+		{
+			session ? (
+			  <p>Welcome {session.user?.name}</p>
+			) : (
+			  <p>Not logged in</p>
+			)
+		  }
 		<Load />
 	</main>
 </Layout>
