@@ -7,7 +7,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:cloudflare": "astro check && astro build",
+    "build:netlify": "astro check && astro build --config netlify-config.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.4",
