@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Lost from '../components/Lost.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 <Layout
@@ -17,7 +16,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 const logoutButton = document.querySelector("#logout") as HTMLButtonElement;
 
 if (loginButton) {
-  loginButton.onclick = () => signIn("github");
+  loginButton.onclick = () => signIn("google");
 }
 
 if (logoutButton) {
