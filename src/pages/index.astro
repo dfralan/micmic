@@ -8,7 +8,7 @@ const meta = {
     content: "2000; url=/partner",
 };
 
-console.log(import.meta.env.FIREBASE_PROJECT_ID)
+const values = import.meta.env.some_value
 ---
 
 <Layout
@@ -19,10 +19,8 @@ console.log(import.meta.env.FIREBASE_PROJECT_ID)
 	>
 	<main>
 		<Load />
+		<p>{values}</p>
+
 	</main>
 </Layout>
-
-<script>
-	console.log(import.meta.env.some_value)
-</script>
 
