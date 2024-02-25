@@ -12,10 +12,12 @@ interface Props {
 	image: string;
 	meta?: { [key: string]: string }[];
 	themeSelector?: string;
+	hideHeader? : boolean;
+	hideFooter? : boolean;
 }
 
 const customMeta = Astro.props.meta || [{ charset: "UTF-8" }];
-const { description, title, image, themeSelector } = Astro.props;
+const { description, title, image, themeSelector, hideHeader, hideFooter } = Astro.props;
 ---
 
 <!doctype html>
@@ -71,9 +73,15 @@ const { description, title, image, themeSelector } = Astro.props;
 	</head>
 
 	<body class="bg-gray-white">
-		<Header />
+		{
+			hideHeader? "" : <Header />
+		}
+		
 		<slot />
-		<Footer />
+
+		{
+			hideHeader? "" : <Footer />
+		}
 	</body>
 
 	<script is:inline src="/appearObserver.js"></script>

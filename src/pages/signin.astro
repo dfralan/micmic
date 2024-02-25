@@ -3,6 +3,7 @@ import { app } from "../firebase/server";
 import { getAuth } from "firebase-admin/auth";
 import Layout from "../layouts/Layout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import GoogleSignInButton from "../components/GoogleSignInButton.astro";
 
 /* Check if the user is authenticated */
 const auth = getAuth(app);
@@ -32,7 +33,7 @@ if (sessionCookie) {
     <input type="password" name="password" id="password" />
     <button type="submit">Login</button>
   </form>
-  <button id="google">Sign in with Google</button>
+  <GoogleSignInButton />
 </Layout>
 <script>
   import {

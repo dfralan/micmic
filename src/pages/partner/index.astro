@@ -7,22 +7,6 @@ import Features from '../../components/Features.astro';
 import Pricing from '../../components/Pricing.astro';
 import FAQ from '../../components/FAQ.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { app } from "../../firebase/server";
-import { getAuth } from "firebase-admin/auth";
-
-/* Check if the user is authenticated */
-const auth = getAuth(app);
-const sessionCookie = Astro.cookies.get("session");
-if (sessionCookie) {
-  const decodedCookie = await auth.verifySessionCookie(sessionCookie.value);
-  if (decodedCookie) {
-    return Astro.redirect("/dashboard");
-  }
-} else {
-  // Handle the case where the session cookie is not found
-  // For example, you might want to redirect the user to the login page
-  // or display an error message.
-}
 ---
 
 <Layout

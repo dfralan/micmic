@@ -1,0 +1,16 @@
+---
+import GoogleIcon from "../../assets/icons/GoogleIcon.astro";
+
+interface Props {
+        customClass?: string
+        id?: string
+}
+
+const { customClass, id } = Astro.props;
+const defaultClass = "bg-white border border-gray-300 text-sm rounded-xl hover:shadow flex flex-row gap-2 items-center justify-center p-2"
+---
+
+<button id={id} class:list={[ defaultClass, customClass ]}>
+    <GoogleIcon />
+    Iniciá con Google
+</button>
