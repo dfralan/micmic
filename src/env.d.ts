@@ -4,7 +4,6 @@
 declare namespace astroHTML.JSX {
     interface HTMLAttributes {
       'loom'?: string;
-      'fill-as-inner'?: string;
     }
   }
 

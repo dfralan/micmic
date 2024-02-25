@@ -1,0 +1,31 @@
+---
+import Container from "./blocks/Container.astro";
+const blockContainer = {
+    inputClass: "transition-all rounded-xl border focs border-gray-400 outline-gray-500  p-2",
+    labelClass: "text-sm"
+}
+---
+
+<Container>
+    <div class="flex flex-col gap-4 p-4">
+        <h1>Register</h1>
+        <p>Already have an account? <a href="/signin">Sign in</a></p>
+        <form class="flex flex-col gap-4 bg-white border rounded-2xl p-4 max-w-2xl w-full mx-auto" action="/api/auth/register" method="post">
+            <div class="flex flex-col gap-2">
+                <label class={blockContainer.labelClass} for="name">Name</label>
+                <input class={blockContainer.inputClass} type="text" name="name" id="name" />
+            </div>
+            <div class="flex flex-col gap-2">
+                <label class={blockContainer.labelClass} for="email" for="email">Email</label>
+                <input class={blockContainer.inputClass} type="email" name="email" id="email" />
+            </div>
+            
+            <label for="email" for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</Container>
