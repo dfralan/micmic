@@ -6,12 +6,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 /* Check if the user is authenticated */
 const auth = getAuth(app);
-if (Astro.cookies.has("session")) {
-  const sessionCookie = Astro.cookies.get("session").value;
-  const decodedCookie = await auth.verifySessionCookie(sessionCookie);
+const sessionCookie = Astro.cookies.get("session");
+if (sessionCookie) {
+  const decodedCookie = await auth.verifySessionCookie(sessionCookie.value);
   if (decodedCookie) {
     return Astro.redirect("/dashboard");
   }
+} else {
+  // Handle the case where the session cookie is not found
+  // For example, you might want to redirect the user to the login page
+  // or display an error message.
 }
 ---
 

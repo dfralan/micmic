@@ -5,16 +5,28 @@ import Layout from "../layouts/Layout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const auth = getAuth(app);
-
-/* Check current session */
 if (!Astro.cookies.has("session")) {
   return Astro.redirect("/signin");
 }
-const sessionCookie = Astro.cookies.get("session").value;
-const decodedCookie = await auth.verifySessionCookie(sessionCookie);
-const user = await auth.getUser(decodedCookie.uid);
 
+const sessionCookie = Astro.cookies.get("session");
+if (!sessionCookie) {
+  // Handle the case where session cookie is not found
+  // For example, redirect the user to the sign-in page
+  return Astro.redirect("/signin");
+}
+
+const decodedCookie = await auth.verifySessionCookie(sessionCookie.value);
+if (!decodedCookie) {
+  // Handle the case where session cookie verification fails
+  // For example, redirect the user to the sign-in page
+  return Astro.redirect("/signin");
+}
+
+const user = await auth.getUser(decodedCookie.uid);
 if (!user) {
+  // Handle the case where user data is not found
+  // For example, redirect the user to the sign-in page
   return Astro.redirect("/signin");
 }
 ---
