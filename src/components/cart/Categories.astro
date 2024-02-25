@@ -1,0 +1,33 @@
+---
+import Icon from "../../components/blocks/Icon.astro";
+
+interface Props {
+    imageB?: {
+        alt: string;
+        src: string;
+        customClass: string
+    }
+
+}
+
+const { imageB} = Astro.props;
+---
+
+<!-- Products Categories Slider -->
+<div class="flex flex-row gap-2 bg-white rounded-2xl">
+    <div class="flex w-fit flex-row gap-1 items-center">
+            <Icon name="menu" size="20" />
+            Menú
+    </div>
+
+    <div
+            class="flex flex-row text-nowrap items-center gap-2 overflow-auto text-gray-600 scrollbar-hide feather-right"
+    >
+            <a href="#">Pizzas XL</a>
+            <a href="#">Bebidas</a>
+            <a href="#">Postres</a>
+            <a href="#">Entradas</a>
+            <a href="#">Cafetería</a>
+            <a href="#">Sanguches</a>
+    </div>
+</div>

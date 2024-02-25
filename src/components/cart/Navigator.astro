@@ -1,0 +1,61 @@
+---
+import Icon from "../../components/blocks/Icon.astro";
+import Categories from "../cart/Categories.astro";
+
+interface Props {
+    cart: {
+        articlesAmount: number;
+        local: boolean
+    }
+}
+
+const { cart } = Astro.props;
+---
+
+<div id="navigator" class="flex flex-col p-4 fixed top-0 right-0 w-full z-20 gap-2" >
+    <div class="flex flex-row gap-2 items-center justify-end">
+
+            <!-- Find Bar -->
+            <div id="navigatorSearchBar" class="relative flex flex-row items-center hidden w-full">
+                <Icon name="search" customClass="absolute fill-gray-400 pointer-events-none m-2"/>            
+                
+                <input type="text" class="bg-white rounded-full border ps-8 pe-2 py-2 w-full h-fit decoration-none"> 
+            </div>
+
+            <!-- Cart Access Button -->
+            <div class="flex items-center justify-end">
+                    <button class="bg-white rounded p-2">
+                            <Icon
+                                    name="shopping_bag"
+                                    customClass="translate-y-[-1px]"
+                            />
+                            <div class="text-xs bg-black rounded-full text-white">
+                                    {cart.articlesAmount}
+                            </div>
+                    </button>
+            </div>
+    </div>
+    <div id="Categories" class="w-full hidden">
+        <Categories />
+    </div> 
+</div>
+
+<script is:inline>
+    const navigator = document.getElementById('navigator')
+    const navigatorSearchBar = document.getElementById('navigatorSearchBar')
+    const Categories = document.getElementById('Categories')
+    var scrollN = false
+
+    window.onscroll = function() {
+        if (window.scrollY > 80) {
+            navigator.classList.add("bg-white", "shadow")
+            navigatorSearchBar.classList.remove("hidden")
+            Categories.classList.remove("hidden")
+        } else {
+            navigator.classList.remove("bg-white", "shadow")
+            navigatorSearchBar.classList.add("hidden")
+            Categories.classList.add("hidden")
+            scrollN = false
+        }
+    }
+</script>
