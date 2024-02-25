@@ -12,7 +12,7 @@ html {
 	--accent-focus: #845200;
 }
 
-@font-face {
+/*@font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
 	font-weight: 400;
@@ -27,7 +27,7 @@ html {
 	font-style: normal;
 	font-display: swap;
 }
-
+*/
 body {
 	font-family: "DM Sans", sans-serif;
 	margin: 0;
