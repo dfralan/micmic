@@ -4,9 +4,10 @@ interface Props {
         customClass?: string
         id?: string
         customType?: string
+		target?: string
 }
 
-const { href, id, customType, customClass, ...props } = Astro.props;
+const { href, id, customType, target, customClass, ...props } = Astro.props;
 const defaultClass = "bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-xl transition-all duration-300"
 const buttonType = (href ? "link" : (customType ?? "button")) as ("submit" | "reset" | "button");
 
@@ -18,7 +19,7 @@ const buttonType = (href ? "link" : (customType ?? "button")) as ("submit" | "re
 
 {
 	href ?
-	<a href={href} id={id} class:list={[defaultClass, customClass]} {...props}>
+	<a target={target} href={href} id={id} class:list={[defaultClass, customClass]} {...props}>
 		<slot />
 	</a> :
 	<button type={buttonType} id={id} class:list={[defaultClass, customClass]} {...props}>
