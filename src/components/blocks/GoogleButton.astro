@@ -2,23 +2,14 @@
 import GoogleIcon from "../../assets/icons/GoogleIcon.astro";
 
 interface Props {
-        href?: string
         customClass?: string
-        id?: string
 }
 
-const { href, customClass, id } = Astro.props;
+const { customClass } = Astro.props;
 const defaultClass = "bg-white border border-gray-300 text-sm rounded-xl hover:shadow flex flex-row gap-2 items-center justify-center p-2"
 ---
-{
-    href ? 
-    <a href={href} id={id} class:list={[ defaultClass, customClass ]}>
-        <GoogleIcon />
-        Iniciá con Google
-    </a> 
-:
-    <button id={id} class:list={[ defaultClass, customClass ]}>
-        <GoogleIcon />
-        Iniciá con Google
-    </button>
-}
+
+<a href='/signin' class:list={[ defaultClass, customClass ]}>
+    <GoogleIcon />
+    Iniciá con Google
+</a>
