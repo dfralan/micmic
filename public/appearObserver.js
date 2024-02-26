@@ -11,9 +11,6 @@ addEventListener("DOMContentLoaded", (event) => {
           if (entry.target.classList.contains("draw-me")) {
             {entry.target.classList.add('draw');}
           } else {entry.target.classList.add('appear');}
-        } else {
-          entry.target.classList.remove('appear');
-          entry.target.classList.add('disappear');
         }
       });
     },
