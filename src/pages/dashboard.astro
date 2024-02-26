@@ -34,7 +34,8 @@ if (!user) {
 <Layout
 	title={SITE_TITLE}
 	description={SITE_DESCRIPTION}
-	image='https://micmic.shop/img/link-img.jpg'>
+	image='https://micmic.shop/img/link-img.jpg'
+  hideHeader={true}>
   <h1>Hola {user.displayName}</h1>
   <form action="/api/auth/signout">
     <button type="submit">Cerrar sesión</button>
