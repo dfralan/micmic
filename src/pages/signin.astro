@@ -32,8 +32,6 @@ if (sessionCookie) {
     getAuth,
     inMemoryPersistence,
     signInWithEmailAndPassword,
-    GoogleAuthProvider,
-    signInWithPopup,
   } from "firebase/auth";
   import { app } from "../firebase/client";
 
@@ -67,19 +65,4 @@ if (sessionCookie) {
     }
   });
 
-  const googleSignin = document.querySelector("#google") as HTMLButtonElement;
-  googleSignin.addEventListener("click", async () => {
-    const provider = new GoogleAuthProvider();
-    const userCredential = await signInWithPopup(auth, provider);
-    const idToken = await userCredential.user.getIdToken();
-    const res = await fetch("/api/auth/signin", {
-      headers: {
-        Authorization: `Bearer ${idToken}`,
-      },
-    });
-
-    if (res.redirected) {
-      window.location.assign(res.url);
-    }
-  });
 </script>
