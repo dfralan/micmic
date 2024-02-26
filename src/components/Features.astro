@@ -1,7 +1,7 @@
 ---
-import Container from './blocks/Container.astro';
 import FeatureBlock from "./blocks/FeatureBlock.astro";
 import features from "../assets/features";
+import Container from './blocks/Container.astro';
 
 const allfeatures = features.map((feature) => ({
 
@@ -13,14 +13,14 @@ imageB: feature.imgB,
 }));
 ---
 
-<Container id="features" customClass="flex flex-col gap-12">
+<Container id="features" customClass="flex flex-col gap-12 py-12">
 
     {
         allfeatures.map((feature, index) => (
         <FeatureBlock
             title={feature.title}
             subtitle={feature.subtitle}
-            featureClass={(index % 2 === 0) ? "md:flex-row" : "md:flex-row-reverse"}
+            featureClass={(index === 0) ? "flex-col" : (index % 2 !== 0) ? "md:flex-row md:text-start" : "md:flex-row-reverse md:text-start"}
             imageA={feature.imageA}
             imageB={feature.imageB}
         />

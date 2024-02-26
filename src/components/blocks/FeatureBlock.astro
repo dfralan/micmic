@@ -1,9 +1,9 @@
 ---
-
 interface Props {
 	title: string;
 	subtitle: string;
     featureClass: string;
+    customImgContainerClass?: string;
     imageA: {
         alt: string;
         src: string;
@@ -17,8 +17,9 @@ interface Props {
 
 }
 
-const { title, subtitle, featureClass, imageA, imageB} = Astro.props;
-const defaultFeatureClass = "flex flex-col max-w-5xl mx-auto items-center text-center md:text-start"
+const { title, subtitle, featureClass, customImgContainerClass, imageA, imageB} = Astro.props;
+const defaultFeatureClass = "flex flex-col max-w-5xl mx-auto items-center text-center"
+const defaultImgContainerClass = "mx-12 md:mx-6 md:w-1/2 relative"
 ---
 
 <div class:list={[defaultFeatureClass, featureClass]}>
@@ -30,7 +31,7 @@ const defaultFeatureClass = "flex flex-col max-w-5xl mx-auto items-center text-c
             {subtitle}
         </p>
     </div>
-    <div class="mx-12 md:mx-6 md:w-1/2 relative">
+    <div class:list={[defaultImgContainerClass, customImgContainerClass]}>
         <img class:list={imageA.customClass} src={imageA.src} alt="">
         <img class:list={imageB.customClass} src={imageB.src} alt="">
     </div>

@@ -24,7 +24,7 @@ export default [
       imgB: {
         src: "/img/more-sales-upper.png",
         alt: "Mockp",
-        customClass: "animate animation-smooth absolute top-0",
+        customClass: "animate animation-smooth absolute bottom-0",
       }
     },
     {
@@ -37,6 +37,20 @@ export default [
       },
       imgB: {
         src: "/img/pickup-focus.png",
+        alt: "Mockp",
+        customClass: "animate animation-smooth absolute top-0",
+      }
+    },
+    {
+      title: "Recibí sugerencias",
+      subtitle: "Mantenete por delante de la competencia analizando tendencias de ventas y preferencias de clientes en tiempo real, gracias a nuestro botón de sugerencias integrado.",
+      imgA: {
+        src: "/img/pickup-alone.png",
+        alt: "Mockp",
+        customClass: "animate animation-fast",
+      },
+      imgB: {
+        src: "/img/suggestions-upper.png",
         alt: "Mockp",
         customClass: "animate animation-smooth absolute top-0",
       }

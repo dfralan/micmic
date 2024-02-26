@@ -1,7 +1,7 @@
 ---
 import Container from "./blocks/Container.astro";
 import ButtonAccess from './blocks/ButtonAccess.astro';
-import GoogleButton from "./blocks/GoogleButton.astro";
+import GoogleSignInButton from "./blocks/GoogleSignInButton.astro";
 const blockContainer = {
     inputClass: "transition-all rounded-xl bg-gray-100 focus:bg-transparent border-2 border-transparent focus:border-gray-500 outline-none px-3 py-1.5",
     labelClass: "text-sm"
@@ -13,21 +13,17 @@ const blockContainer = {
         <h2
             class="text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl"
         >
-            Registrate, es simple
+            ¡Hola!
         </h2>
         <p
             class="text-gray-600"
             
         >
-        y solo te llevará un minuto.
+        Qué bueno verte de nuevo.
         </p>
     </div>
     </div>
-    <form class="flex flex-col gap-4 bg-white md:border rounded-2xl md:px-6 md:py-8 md:w-1/2 mx-auto " action="/api/auth/register" method="post">
-        <div class="flex flex-col gap-2">
-            <label class={blockContainer.labelClass} for="name">Nombre de usuario</label>
-            <input class={blockContainer.inputClass} type="text" name="name" id="name" />
-        </div>
+    <form class="flex flex-col gap-4 bg-white md:border rounded-2xl md:px-6 md:py-8 md:w-1/2 mx-auto " action="/api/auth/signin" method="post">
         <div class="flex flex-col gap-2">
             <label class={blockContainer.labelClass} for="email">Correo electrónico</label>
             <input class={blockContainer.inputClass} type="email" name="email" id="email" />
@@ -37,14 +33,13 @@ const blockContainer = {
             <input class={blockContainer.inputClass} type="password" name="password" id="password" />
         </div>
         <div class="flex flex-col gap-2">
-            <p class="text-xs text-gray-500">People who use our service may have uploaded your contact information to Facebook. <a href="/privacy">Learn more</a>.</p>
-            <p class="text-xs text-gray-500">By clicking Sign Up, you agree to our <a href="/privacy">Privacy Policy</a> and <a href="/privacy">Cookies Policy</a>.</p>
-    
+            <p class="text-xs text-gray-500">Algunas de nuestras políticas de privacidad han cambiado, checalas en <a href="/privacy">Privacy Policy</a>.</p>
         </div>
         
-        <ButtonAccess customType="submit" customClass="md:w-fit md:mx-auto">Registrate</ButtonAccess>
+        <ButtonAccess customType="submit">Iniciá sesión</ButtonAccess>
         <p class="text-gray-600 text-center mx-auto">ó</p>
-        <GoogleButton href="/signin" />
+        <GoogleSignInButton />
+        <p class="mx-auto">¿No sos cliente? <a class="text-orange-500 hover:underline" href="/register">Create an account</a></p>
     </form>
 
 </Container>

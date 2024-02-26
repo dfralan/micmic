@@ -1,21 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import RegisterCard from "../components/RegisterCard.astro";
 ---
 
 <Layout
 	title={SITE_TITLE}
 	description={SITE_DESCRIPTION}
 	image='https://micmic.shop/img/link-img.jpg'>
-  <h1>Register</h1>
-  <p>Already have an account? <a href="/signin">Sign in</a></p>
-  <form action="/api/auth/register" method="post">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" />
-    <label for="email" for="email">Email</label>
-    <input type="email" name="email" id="email" />
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
-    <button type="submit">Login</button>
-  </form>
+  <RegisterCard />
 </Layout>

@@ -18,7 +18,7 @@ addEventListener("DOMContentLoaded", (event) => {
       });
     },
       {
-        threshold: 0.7
+        threshold: 0.5
       });
     //
     for (let i = 0; i < toAnimate.length; i++) {
