@@ -5,12 +5,12 @@ export default [
       imgA: {
         src: "/img/etiquetas-superpuestas.png",
         alt: "Mockp",
-        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 transition-all duration-300",
+        customClass: "intersect unintersected:opacity-0 intersected:opacity-100 unintersected:translate-x-4 intersected:translate-x-0 transition-all duration-300",
       },
       imgB: {
         src: "/img/qr-micmic.png",
         alt: "Mockp",
-        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 delay-300 z-10",
+        customClass: "intersect unintersected:opacity-0 intersected:opacity-100 unintersected:translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 delay-300 z-10",
       },
     },
     {
@@ -19,12 +19,12 @@ export default [
       imgA: {
         src: "/img/more-sales-under.png",
         alt: "Mockp",
-        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 transition-all duration-300",
+        customClass: "intersect unintersected:opacity-0 intersected:opacity-100 unintersected:translate-x-4 intersected:translate-x-0 transition-all duration-300",
       },
       imgB: {
         src: "/img/more-sales-upper.png",
         alt: "Mockp",
-        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 z-10 delay-300",
+        customClass: "intersect unintersected:opacity-0 intersected:opacity-100 unintersected:translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 delay-300 z-10",
       }
     },
     {
@@ -33,12 +33,12 @@ export default [
       imgA: {
         src: "/img/pickup-alone.png",
         alt: "Mockp",
-        customClass: "intersect translate-x-4 intersected:translate-x-0 transition-all duration-300",
+        customClass: "intersect unintersected:opacity-0 intersected:opacity-100 unintersected:translate-x-4 intersected:translate-x-0 transition-all duration-300",
       },
       imgB: {
         src: "/img/pickup-focus.png",
         alt: "Mockp",
-        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 z-10 delay-300",
+        customClass: "intersect unintersected:opacity-0 intersected:opacity-100 unintersected:translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 delay-300 z-10",
       },
     },
     {
@@ -47,12 +47,12 @@ export default [
       imgA: {
         src: "/img/pickup-alone.png",
         alt: "Mockp",
-        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 transition-all duration-300",
+        customClass: "intersect unintersected:opacity-0 intersected:opacity-100 unintersected:translate-x-4 intersected:translate-x-0 transition-all duration-300",
       },
       imgB: {
         src: "/img/suggestions-upper.png",
         alt: "Mockp",
-        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 z-10 delay-300",
+        customClass: "intersect unintersected:opacity-0 intersected:opacity-100 unintersected:translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 delay-300 z-10",
       }
     },
   ];

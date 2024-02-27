@@ -1,8 +1,8 @@
-.desdibujo {
+.undraw {
   clip-path: inset(0 100% 0 0);
 }
 
-.dibujo {
+.draw {
   opacity: 1 !important;
   clip-path: inset(0 1% 0 0);
 }
