@@ -31,7 +31,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
       case "auth/claims-too-large":
         return new Response("Claims payload exceeds maximum allowed size", { status: 400 });
       case "auth/email-already-exists":
-        alert("email already in use");
+        alert("email already in use ");
       case "auth/id-token-expired":
       case "auth/session-cookie-expired":
         return new Response("Token is expired", { status: 400 });
