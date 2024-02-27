@@ -33,7 +33,7 @@ export default [
       imgA: {
         src: "/img/pickup-alone.png",
         alt: "Mockp",
-        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 transition-all duration-300",
+        customClass: "intersect translate-x-4 intersected:translate-x-0 transition-all duration-300",
       },
       imgB: {
         src: "/img/pickup-focus.png",

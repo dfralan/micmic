@@ -1,9 +1,10 @@
-.undraw {
+.desdibujo {
   clip-path: inset(0 100% 0 0);
 }
 
-.draw {
-  clip-path: inset(0 0 0 0);
+.dibujo {
+  opacity: 1 !important;
+  clip-path: inset(0 1% 0 0);
 }
 
 .floating-element {
@@ -19,24 +20,3 @@
   }
 }
 
-
-
-.drawy {
-  opacity: 1 !important;
-  clip-path: inset(0 100% 0 0);
-  animation-fill-mode: forwards;
-  animation-name: drawyy !important;
-}
-
-
-@keyframes drawyy {
-  from {
-    clip-path: inset(0 100% 0 0);
-    /* Start from 0 width */
-  }
-
-  to {
-    clip-path: inset(0 0 0 0);
-    /* End with full width */
-  }
-}
