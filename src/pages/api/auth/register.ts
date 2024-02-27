@@ -25,22 +25,33 @@ export const POST: APIRoute = async ({ request, redirect }) => {
       password,
       displayName: name,
     });
+    return redirect("/signin");
   } catch (error: any) {
     switch (error.code) {
-      case "auth/email-already-in-use":
-        // Handle the case where email is already in use
-        // For example: console.log("Email is already in use");
+      case "auth/claims-too-large":
+        return new Response("Claims payload exceeds maximum allowed size", { status: 400 });
+      case "auth/email-already-exists":
         return new Response("Email is already in use", { status: 400 });
+      case "auth/id-token-expired":
+      case "auth/session-cookie-expired":
+        return new Response("Token is expired", { status: 400 });
       case "auth/id-token-revoked":
-        // Handle the case where the ID token has been revoked
-        // For example: console.log("ID token has been revoked");
-        return new Response("ID token has been revoked", { status: 400 });
+      case "auth/session-cookie-revoked":
+        return new Response("Token has been revoked", { status: 400 });
       case "auth/insufficient-permission":
-        // Handle the case where there are insufficient permissions
-        // For example: console.log("Insufficient permissions");
         return new Response("Insufficient permissions", { status: 400 });
+      case "auth/internal-error":
+        return new Response("Internal server error", { status: 500 });
+      case "auth/invalid-argument":
+      case "auth/invalid-claims":
+      case "auth/invalid-disabled-field":
+      case "auth/invalid-display-name":
+      case "auth/invalid-email":
+      case "auth/invalid-email-verified":
+      // Handle other specific invalid cases as needed
+        return new Response("Invalid argument", { status: 400 });
+      // Add cases for other specific errors as needed
       default:
-        // Handle other errors
         console.error("Error creating user:", error);
         return new Response("An error occurred", { status: 500 }); // Use 500 for unknown errors
     }
