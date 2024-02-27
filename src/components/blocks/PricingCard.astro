@@ -19,7 +19,7 @@ interface Props {
     callToAction: {
         content: string;
         href: string;
-        customClass?: string;
+        target?: string;
     };
 }
 
@@ -71,20 +71,16 @@ const { title, label, subtitle, pricing, planFeatures, callToAction } =
                 label ? (
                     <ButtonAccess
                         href={callToAction.href}
-                        class:list={[
-                            "text-xl w-full text-center mx-auto mt-4",
-                            callToAction.customClass,
-                        ]}
+                        target={callToAction.target}
+                        customClass="text-xl w-full text-center mx-auto mt-4"
                     >
                         {callToAction.content}
                     </ButtonAccess>
                 ) : (
                     <ButtonAccessSecondary
                         href={callToAction.href}
-                        class:list={[
-                            "text-xl w-full text-center mx-auto mt-4",
-                            callToAction.customClass,
-                        ]}
+                        target={callToAction.target}
+                        customClass="text-xl w-full text-center mx-auto mt-4"
                     >
                         {callToAction.content}
                     </ButtonAccessSecondary>
