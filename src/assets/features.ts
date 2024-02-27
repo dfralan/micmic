@@ -3,15 +3,15 @@ export default [
       title: "Organizá tus productos",
       subtitle: "No más etiquetas de precios de forma desordenada. Cambiá precios, nombres de productos, descripciones, y visualizá los cambios instantáneamente.",
       imgA: {
-        src: "/img/qr-micmic.png",
-        alt: "Mockp",
-        customClass: "animate animation-smooth absolute top-0 hideOnHover",
-      },
-      imgB: {
         src: "/img/etiquetas-superpuestas.png",
         alt: "Mockp",
-        customClass: "",
-      }
+        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 transition-all duration-300",
+      },
+      imgB: {
+        src: "/img/qr-micmic.png",
+        alt: "Mockp",
+        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 delay-300 z-10",
+      },
     },
     {
       title: "Optimizá costos",
@@ -19,12 +19,12 @@ export default [
       imgA: {
         src: "/img/more-sales-under.png",
         alt: "Mockp",
-        customClass: "animate animation-fast",
+        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 transition-all duration-300",
       },
       imgB: {
         src: "/img/more-sales-upper.png",
         alt: "Mockp",
-        customClass: "animate animation-smooth absolute bottom-0",
+        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 z-10 delay-300",
       }
     },
     {
@@ -33,13 +33,13 @@ export default [
       imgA: {
         src: "/img/pickup-alone.png",
         alt: "Mockp",
-        customClass: "animate animation-fast",
+        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 transition-all duration-300",
       },
       imgB: {
         src: "/img/pickup-focus.png",
         alt: "Mockp",
-        customClass: "animate animation-smooth absolute top-0",
-      }
+        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 z-10 delay-300",
+      },
     },
     {
       title: "Recibí sugerencias",
@@ -47,12 +47,12 @@ export default [
       imgA: {
         src: "/img/pickup-alone.png",
         alt: "Mockp",
-        customClass: "animate animation-fast",
+        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 transition-all duration-300",
       },
       imgB: {
         src: "/img/suggestions-upper.png",
         alt: "Mockp",
-        customClass: "animate animation-smooth absolute top-0",
+        customClass: "intersect opacity-0 intersected:opacity-100 translate-x-4 intersected:translate-x-0 absolute top-0 transition-all duration-300 z-10 delay-300",
       }
     },
   ];

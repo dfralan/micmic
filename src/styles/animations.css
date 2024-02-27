@@ -1,36 +1,9 @@
-
-
-.animation-smooth {
-  animation-duration: 0.5s;
-}
-
-.animation-fast {
-  animation-duration: .2s;
-}
-
-.animate {
-
-  opacity: 0;
-  animation-fill-mode: forwards;
+.undraw {
+  clip-path: inset(0 100% 0 0);
 }
 
 .draw {
-  opacity: 1 !important;
-  clip-path: inset(0 100% 0 0);
-  animation-fill-mode: forwards;
-  animation-name: draw !important;
-}
-
-.appear {
-  animation-name: appear;
-}
-
-.disappear {
-  animation-name: disappear;
-}
-
-.hideOnHover:hover {
-  animation-name: disappear;
+  clip-path: inset(0 0 0 0);
 }
 
 .floating-element {
@@ -46,32 +19,17 @@
   }
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
 
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
 
-@keyframes disappear {
-  from {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-
-  to {
-    opacity: 0;
-    transform: translateX(20px);
-  }
+.drawy {
+  opacity: 1 !important;
+  clip-path: inset(0 100% 0 0);
+  animation-fill-mode: forwards;
+  animation-name: drawyy !important;
 }
 
 
-@keyframes draw {
+@keyframes drawyy {
   from {
     clip-path: inset(0 100% 0 0);
     /* Start from 0 width */
