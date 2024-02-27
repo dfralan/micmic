@@ -11,6 +11,21 @@ export const POST: APIRoute = async ({ request, redirect }) => {
   const password = formData.get("password")?.toString();
   const name = formData.get("name")?.toString();
 
+
+  // Función para decodificar un mensaje base64
+  function decodificarMensaje(mensajeBase64 : string) {
+    return Buffer.from(mensajeBase64, 'base64').toString('utf-8');
+  }
+
+
+  // Create response with redirection and buffered error message
+  function redirectionConstructor(url: string, errorMessage: string) {
+    const bufferedMessage = Buffer.from(errorMessage).toString('base64')
+    const redirectUrl = `${url}?error=${bufferedMessage}`; // Construir la URL de redirección con el mensaje de error como parámetro
+    const headers = { "Location": redirectUrl };
+    return new Response(null, { status: 302, headers });
+  }
+
   if (!email || !password || !name) {
     return new Response(
       "Missing form data",
@@ -30,27 +45,31 @@ export const POST: APIRoute = async ({ request, redirect }) => {
     switch (error.code) {
       case "auth/claims-too-large":
         return new Response("Claims payload exceeds maximum allowed size", { status: 400 });
+  
       case "auth/email-already-exists":
-        alert("email already in use ");
+        redirectionConstructor("/email-already-exists", "El email que ingresaste ya está registrado")
+        
+        
       case "auth/id-token-expired":
       case "auth/session-cookie-expired":
-        return new Response("Token is expired", { status: 400 });
       case "auth/id-token-revoked":
       case "auth/session-cookie-revoked":
-        return new Response("Token has been revoked", { status: 400 });
+        return new Response("Token is expired or revoked", { status: 400 });
+  
       case "auth/insufficient-permission":
         return new Response("Insufficient permissions", { status: 400 });
+  
       case "auth/internal-error":
         return new Response("Internal server error", { status: 500 });
+  
       case "auth/invalid-argument":
       case "auth/invalid-claims":
       case "auth/invalid-disabled-field":
       case "auth/invalid-display-name":
       case "auth/invalid-email":
       case "auth/invalid-email-verified":
-      // Handle other specific invalid cases as needed
         return new Response("Invalid argument", { status: 400 });
-      // Add cases for other specific errors as needed
+  
       default:
         console.error("Error creating user:", error);
         return new Response("An error occurred", { status: 500 }); // Use 500 for unknown errors

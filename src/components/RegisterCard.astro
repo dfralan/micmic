@@ -8,7 +8,7 @@ const blockContainer = {
 }
 ---
 
-<Container customClass="mt-24 flex flex-col gap-6 lg:flex-row lg:max-w-fit">
+<Container customClass="mt-24 flex flex-col gap-6 lg:flex-row lg:max-w-4xl">
     <div class="text-center gap-2 lg:gap-4 flex flex-col lg:w-5/12 lg:pl-12 lg:text-left">
         <h2
             class="text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl"
@@ -35,10 +35,11 @@ const blockContainer = {
         <div class="flex flex-col gap-2">
             <label class={blockContainer.labelClass} for="password">Contraseña</label>
             <input class={blockContainer.inputClass} type="password" name="password" id="password" />
+            <p id="pass-alert"></p>
         </div>
         <div class="flex flex-col gap-2">
-            <p class="text-xs text-gray-500">People who use our service may have uploaded your contact information to Facebook. <a href="/privacy">Learn more</a>.</p>
-            <p class="text-xs text-gray-500">By clicking Sign Up, you agree to our <a href="/privacy">Privacy Policy</a> and <a href="/privacy">Cookies Policy</a>.</p>
+            <p class="text-xs text-gray-500">Al registrarse, usted confirma haber leído y aceptado nuestras <a class="hover:underline text-orange-500" href="/privacy">Políticas de Privacidad</a>,
+                al igual que nuestras <a class="hover:underline text-orange-500" href="/privacy">Condiciones del Servicio</a> y se compromete a cumplirlas.</p>
     
         </div>
         

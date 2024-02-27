@@ -1,7 +1,7 @@
 export default 
   {
     name: "Políticas de Privacidad",
-    description: "¿Cómo recopilamos tu información?",
+    description: "Política de Privacidad y Recopilación de Información en micmic.shop",
     content: `
     <h1 class="text-2xl font-semibold">Política de Privacidad de micmic.shop</h1>
     <p class='text-gray-700'>Última actualización: 23/02/2024</p>
