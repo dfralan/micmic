@@ -1,12 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import RegisterCard from "../components/RegisterCard.astro";
+import {  registerUser } from "./api/auth/register.ts";
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await registerUser({ request: Astro.request });
+
+    // Do something with the data
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 ---
 
 <Layout
-	title={SITE_TITLE}
-	description={SITE_DESCRIPTION}
-	image='https://micmic.shop/img/link-img.jpg'>
+  title={SITE_TITLE}
+  description={SITE_DESCRIPTION}
+  image="https://micmic.shop/img/link-img.jpg"
+>
   <RegisterCard />
 </Layout>
