@@ -72,7 +72,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
   
       default:
         console.error("Error creating user:", error);
-        return new Response("An error occurred", { status: 500 }); // Use 500 for unknown errors
+        redirectionConstructor("/email-already-exists", "An error")
     }
   }
   return redirect("/signin");
