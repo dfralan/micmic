@@ -2,17 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import RegisterCard from "../components/RegisterCard.astro";
-import {  registerUser } from "./api/auth/register.ts";
+import { registerUser } from "./api/auth/register.ts";
 
+let status = { error: { code: null } };
 if (Astro.request.method === "POST") {
   try {
-    const data = await registerUser({ request: Astro.request });
-
-    // Do something with the data
-  } catch (error) {
-    if (error instanceof Error) {
-      console.error(error.message);
-    }
+    await registerUser({ request: Astro.request });
+  } catch (error: any) {
+    status.error.code = error?.code || null;
   }
 }
 ---
@@ -22,5 +19,5 @@ if (Astro.request.method === "POST") {
   description={SITE_DESCRIPTION}
   image="https://micmic.shop/img/link-img.jpg"
 >
-  <RegisterCard />
+  <RegisterCard {status} />
 </Layout>
