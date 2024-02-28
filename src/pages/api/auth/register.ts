@@ -54,7 +54,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
       case "auth/session-cookie-expired":
       case "auth/id-token-revoked":
       case "auth/session-cookie-revoked":
-        return new Response("Token is expired or revoked", { status: 400 });
+        redirectionConstructor("/email-already-exists", "Token is expired or revoked")
   
       case "auth/insufficient-permission":
         return new Response("Insufficient permissions", { status: 400 });
