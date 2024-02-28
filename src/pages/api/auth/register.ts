@@ -47,14 +47,14 @@ export const POST: APIRoute = async ({ request, redirect }) => {
         return new Response("Claims payload exceeds maximum allowed size", { status: 400 });
   
       case "auth/email-already-exists":
-        redirectionConstructor("/email-already-exists", "El email que ingresaste ya está registrado")
+        redirectionConstructor("/error/email-already-exists", "El email que ingresaste ya está registrado")
         
         
       case "auth/id-token-expired":
       case "auth/session-cookie-expired":
       case "auth/id-token-revoked":
       case "auth/session-cookie-revoked":
-        redirectionConstructor("/email-already-exists", "Token is expired or revoked")
+        redirectionConstructor("/error/email-already-exists", "Token is expired or revoked")
   
       case "auth/insufficient-permission":
         return new Response("Insufficient permissions", { status: 400 });
@@ -72,7 +72,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
   
       default:
         console.error("Error creating user:", error);
-        redirectionConstructor("/email-already-exists", "An error")
+        redirectionConstructor("/error/email-already-exists", "An error")
     }
   }
   return redirect("/signin");
