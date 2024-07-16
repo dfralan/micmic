@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
+
+ body {
+	 margin: 0;
+	 font-family: 'Barlow Condensed', sans-serif;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 padding: 40px 0px;
+	 font-weight: 500;
+	 letter-spacing: -1.5px;
+	 font-size: 26px;
+}
+ .background {
+	 background-image: url('https://drive.google.com/uc?id=1c49_ZnKc6ca5oGxlfp4W_JCiVEx7u2iH');
+	 background-size: cover;
+	 width: 900px;
+	 min-height: 100vh;
+	 border-radius: 20px;
+	 background-repeat: no-repeat;
+	 display: flex;
+	 text-transform: uppercase;
+	 color: #453b34;
+	 box-shadow: 5px 5px 15px 0 rgba(69, 59, 52, 0.7);
+}
+ .background .container {
+	 width: 100%;
+	 height: 100%;
+	 margin: 40px;
+	 padding: 15px;
+	 border: solid 4px #453b34;
+}
+ .background .container .header-container {
+	 width: 100%;
+	 display: flex;
+}
+ .background .container .header-container .title-container {
+	 width: 40%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 flex-direction: column;
+	 border-right: solid 4px #453b34;
+	 padding-right: 15px;
+}
+ .background .container .header-container .title-container .name {
+	 font-size: 38px;
+	 padding-bottom: 7.5px;
+	 background: linear-gradient(white, white) #453b34 no-repeat;
+	 background-size: 0 100%;
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: transparent;
+	 transition: all 0.3s;
+}
+ .background .container .header-container .title-container .name:hover {
+	 background-size: 100% 100%;
+}
+ .background .container .header-container .title-container .title {
+	 border-top: solid 4px #453b34;
+	 font-size: 64px;
+	 font-weight: 600;
+	 text-align: right;
+	 line-height: 120%;
+	 background: linear-gradient(white, white) #453b34 no-repeat;
+	 background-size: 0 100%;
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: transparent;
+	 transition: all 0.3s;
+}
+ .background .container .header-container .title-container .title:hover {
+	 background-size: 100% 100%;
+}
+ .background .container .header-container .feature-container {
+	 margin-top: -11.5384615385px;
+	 width: 60%;
+}
+ .background .container .header-container .feature-container .open-hour-container {
+	 display: flex;
+	 align-items: center;
+	 border-bottom: solid 4px #453b34;
+	 margin-left: 15px;
+}
+ .background .container .header-container .feature-container .open-hour-container .title {
+	 font-size: 64px;
+	 margin-right: auto;
+	 background: linear-gradient(white, white) #453b34 no-repeat;
+	 background-size: 0 100%;
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: transparent;
+	 transition: all 0.3s;
+}
+ .background .container .header-container .feature-container .open-hour-container .title:hover {
+	 background-size: 100% 100%;
+}
+ .background .container .header-container .feature-container .open-hour-container .detail {
+	 margin-left: 30px;
+	 background: linear-gradient(white, white) #453b34 no-repeat;
+	 background-size: 0 100%;
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: transparent;
+	 transition: all 0.3s;
+}
+ .background .container .header-container .feature-container .open-hour-container .detail:hover {
+	 background-size: 100% 100%;
+}
+ .background .container .header-container .feature-container .deal-container {
+	 display: flex;
+}
+ .background .container .header-container .feature-container .deal-container .deals {
+	 display: flex;
+	 flex-direction: column;
+	 margin-left: 15px;
+	 margin-right: auto;
+}
+ .background .container .header-container .feature-container .deal-container .deals .deal {
+	 font-size: 38px;
+}
+ .background .container .header-container .feature-container .deal-container .deals .deal .title {
+	 background: linear-gradient(white, white) #453b34 no-repeat;
+	 background-size: 0 100%;
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: transparent;
+	 transition: all 0.3s;
+	 font-size: 53.2px;
+}
+ .background .container .header-container .feature-container .deal-container .deals .deal .title:hover {
+	 background-size: 100% 100%;
+}
+ .background .container .header-container .feature-container .deal-container .deals .deal .subtitle {
+	 font-size: 20px;
+	 letter-spacing: -0.5px;
+	 opacity: 0.7;
+}
+ .background .container .header-container .feature-container .deal-container .vertical-text {
+	 writing-mode: vertical-rl;
+	 background-color: #453b34;
+	 margin-top: 15px;
+}
+ .background .container .header-container .feature-container .deal-container .vertical-text .text {
+	 width: 100%;
+	 height: 100%;
+	 background-image: url('https://drive.google.com/uc?id=1c49_ZnKc6ca5oGxlfp4W_JCiVEx7u2iH');
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: transparent;
+	 font-weight: 600;
+	 font-size: 70.4px;
+	 line-height: 115%;
+	 padding-top: 7.5px;
+}
+ .background .container .menu-separator {
+	 position: relative;
+	 width: 100%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 font-size: 53.2px;
+	 border-top: solid 4px #453b34;
+	 border-bottom: solid 4px #453b34;
+	 margin-top: 15px;
+	 margin-bottom: 30px;
+	 background: linear-gradient(white, white) #453b34 no-repeat;
+	 background-size: 0 100%;
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: transparent;
+	 transition: all 0.3s;
+}
+ .background .container .menu-separator:hover {
+	 background-size: 100% 100%;
+}
+ .background .container .menu-separator:before {
+	 content: '';
+	 position: absolute;
+	 height: 4px;
+	 background-color: #453b34;
+	 width: 40%;
+	 left: 0;
+}
+ .background .container .menu-separator:after {
+	 content: '';
+	 position: absolute;
+	 height: 4px;
+	 background-color: #453b34;
+	 width: 40%;
+	 right: 0;
+}
+ .background .container .menu-container {
+	 display: flex;
+}
+ .background .container .menu-container .menu-column {
+	 display: flex;
+	 flex-direction: column;
+	 flex-wrap: wrap;
+	 width: 100%;
+	 height: 600px;
+}
+ .background .container .menu-container .menu-column .food {
+	 width: 40%;
+	 margin-bottom: 30px;
+}
+ .background .container .menu-container .menu-column .food .title-container {
+	 display: flex;
+	 letter-spacing: -0.5px;
+	 margin-bottom: 6px;
+}
+ .background .container .menu-container .menu-column .food .title-container .title {
+	 white-space: nowrap;
+	 background: linear-gradient(white, white) #453b34 no-repeat;
+	 background-size: 0 100%;
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: transparent;
+	 transition: all 0.3s;
+}
+ .background .container .menu-container .menu-column .food .title-container .title:hover {
+	 background-size: 100% 100%;
+}
+ .background .container .menu-container .menu-column .food .title-container .dot {
+	 border-bottom: dotted 2.8px rgba(69, 59, 52, 0.8);
+	 width: 100%;
+	 margin: 0px 12px;
+}
+ .background .container .menu-container .menu-column .food .subtitle {
+	 font-size: 20px;
+	 letter-spacing: -0.5px;
+	 opacity: 0.7;
+	 background: linear-gradient(white, white) #453b34 no-repeat;
+	 background-size: 0 100%;
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: transparent;
+	 transition: all 0.3s;
+}
+ .background .container .menu-container .menu-column .food .subtitle:hover {
+	 background-size: 100% 100%;
+}
+ .background .container .disclaimer {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 100%;
+	 font-size: 20px;
+	 letter-spacing: -0.5px;
+	 opacity: 0.7;
+	 margin-top: - 30px;
+}
+ 

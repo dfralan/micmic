@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="https://micmic.shop/src/public/img/yendo.svg">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffffff;
+    }
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+  <title>Sin conexión a internet</title>
+</head>
+<body>
+    <div class="text-center w-100">
+      <img src="https://micmic.shop/src/public/img/no-connection.svg" alt="SVG Image" width="264" height="218">
+    </div>
+        
+    <script>
+        
+        const checkOnlineStatus = async () => {
+  try {
+    const response = await fetch('/ping.json'); // Send a network request to the ping endpoint
+    if (response.ok) {
+      window.location.href = '/online.html'; // Redirect to the online page
+    }
+  } catch (error) {
+    // Handle network request errors
+  }
+};
+
+const handleOnlineStatusChange = () => {
+  if (navigator.onLine) {
+    checkOnlineStatus();
+  }
+};
+
+window.addEventListener('online', handleOnlineStatusChange);
+window.addEventListener('offline', handleOnlineStatusChange);
+
+// Check the online status when the page loads
+checkOnlineStatus();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway:ital,wght@0,400;1,700&display=swap");
+:root {
+  --cl-bg: hsl(30, 66%, 89%);
+  --cl-accent: hsl(0, 61%, 57%);
+  --cl-text: hsl(206, 17%, 28%);
+  --cl-alternative: hsl(0, 97%, 97%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cl-bg);
+  color: var(--cl-text);
+  padding: 10vmin;
+}
+
+.menu {
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1ch;
+}
+@media (max-width: 630px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+}
+.menu__restaurant {
+  flex-direction: column;
+  height: 100%;
+  padding: 0 !important;
+}
+.menu__restaurant small {
+  color: var(--cl-text);
+  letter-spacing: 0.5ch;
+}
+.menu > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.marquee {
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+  position: relative;
+  overflow: hidden;
+}
+.marquee:hover > .marquee__container {
+  animation-play-state: paused;
+}
+.marquee__container {
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 5s linear infinite;
+  animation-play-state: running;
+}
+.marquee__container h2 {
+  white-space: nowrap;
+}
+
+.art {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2ch 0;
+  padding: 2ch 0;
+  position: relative;
+}
+.art__writing {
+  opacity: 0.7;
+  font-size: clamp(2rem, 12vmin, 5rem);
+  letter-spacing: 0.5ch;
+}
+.art__dots-1 {
+  font-size: 2rem;
+  display: block;
+  height: 100%;
+  font-weight: normal;
+  letter-spacing: 2ch;
+}
+@media (max-width: 560px) {
+  .art__dots-1 {
+    display: none;
+  }
+}
+.art__dots-1::before {
+  content: "....";
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-30%);
+  opacity: 0.7;
+}
+.art__dots-1::after {
+  content: "";
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 5%;
+  border: 3px solid var(--cl-accent);
+  border-radius: 50%;
+  transform: translateX(-25px);
+}
+.art__fish {
+  width: clamp(320px, 60vw, 500px);
+}
+.art__dots-2 {
+  font-size: 2.3rem;
+  display: block;
+  height: 100%;
+  font-weight: normal;
+  letter-spacing: 2ch;
+}
+@media (max-width: 560px) {
+  .art__dots-2 {
+    display: none;
+  }
+}
+.art__dots-2::before {
+  content: "....";
+  height: 100%;
+  position: absolute;
+  top: 10%;
+}
+.art__circles {
+  display: block;
+  align-self: flex-end;
+  height: 70px;
+  min-width: 70px;
+  position: relative;
+  background: var(--cl-alternative);
+  border-radius: 50%;
+}
+.art__circles::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 3px solid var(--cl-accent);
+  border-radius: 50%;
+  transform: translate(0%, -50%);
+}
+
+.dishes {
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: 2ch;
+}
+
+.dish {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content;
+  gap: 1ch;
+}
+@media (max-width: 630px) {
+  .dish {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px max-content;
+  }
+}
+.dish > * {
+  height: 100%;
+  padding: 1ch 2ch;
+}
+.dish__image {
+  width: 100%;
+  height: 100%;
+}
+.dish__container {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  height: 100%;
+}
+@media (max-width: 630px) {
+  .dish__container {
+    flex-direction: column;
+  }
+}
+.dish__title {
+  height: min-content;
+  margin: 0 1.5ch;
+}
+@media (min-width: 630px) {
+  .dish__title {
+    width: 40px;
+    word-wrap: break-word;
+  }
+}
+.dish__product {
+  display: grid;
+  gap: 1ch;
+  list-style-type: none;
+}
+.dish__product-item {
+  display: grid;
+  grid-template-columns: 2fr 75px;
+  grid-template-rows: repeat(2, min-content);
+}
+.dish__description {
+  grid-area: 2/1/3/2;
+}
+.dish__price {
+  justify-self: end;
+}
+
+.credits {
+  display: grid;
+  place-items: center;
+  gap: 1ch;
+  margin-top: 2ch;
+  padding: 1ch;
+  text-align: center;
+}
+.credits a {
+  color: var(--cl-accent);
+}
+
+.big {
+  grid-column: span 2;
+}
+@media (max-width: 630px) {
+  .big {
+    grid-column: span 1;
+  }
+}
+
+.header-1 {
+  font: 700 clamp(1.4rem, 4vw, 2rem) "Raleway", sans-serif;
+  text-align: center;
+  letter-spacing: 1ch;
+}
+
+.header-2 {
+  font: 700 clamp(1.2rem, 3vw, 1.5rem) "Montserrat", sans-serif;
+  text-align: center;
+  letter-spacing: 0.8ch;
+}
+
+.title {
+  font: normal 1.4rem "Montserrat", sans-serif;
+}
+
+.text {
+  font: normal 1rem "Montserrat", sans-serif;
+}
+
+.cl-accent {
+  color: var(--cl-accent);
+}
+
+@media (min-width: 63px) {
+  .o {
+    order: var(--order, -1);
+  }
+}
+
+.menu > *, .dish > *, .credits {
+  --thickness: 2px;
+  box-shadow: 0 0 0 var(--thickness) var(--cl-text);
+}
+
+.art__writing, .art__dots-1::before, .art__dots-2::before {
+  writing-mode: vertical-lr;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+  to {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}

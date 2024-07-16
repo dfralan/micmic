@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html style="background-color: #EAE9EE;" lang="en" data-theme="light">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>micmic Partner - El aliado de tu local gastronómico</title>
+        <meta name="description" content="Order now.">
+        <link rel="icon" type="image/svg+xml" href="https://micmic.shop/src/public/img/yendo.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://micmic.shop/src/public/js/utilities.js"></script>
+
+        <!-- Anular redireccion preventivamente para indexar nuevo contenido para google search
+        <meta http-equiv="Refresh" content="0; url='https://micmic.shop/homes/saas'" />-->
+        <style>
+            * {
+                font-family: 'Roboto', sans-serif
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .logoLoadAnimationContainer {
+                position: fixed;
+                background-color: white;
+                width: 100%;
+                height: 100%;
+                z-index: 999999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: fadeOut 1s forwards 2s;
+                -webkit-animation: fadeOut 1s forwards 2s;
+                -moz-animation: fadeOut 1s forwards 2s;
+                -ms-animation: fadeOut 1s forwards 2s;
+                -o-animation: fadeOut 1s forwards 2s;
+            }
+
+            .logoLoadAnimation {
+                opacity: 0;
+                animation: fadeIn 1s forwards 1s;
+                -webkit-animation: fadeIn 1s forwards 1s;
+                -moz-animation: fadeIn 1s forwards 1s;
+                -ms-animation: fadeIn 1s forwards 1s;
+                -o-animation: fadeIn 1s forwards 1s;
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    display: block;
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    display: none;
+                    opacity: 0;
+                }
+            }
+
+            @keyframes fadeOut {
+                0% {
+                    opacity: 1;
+                    display: flex;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 0;
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZYEX17DFD"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BZYEX17DFD');
+    </script>
+
+    <body class="display-flex flex-col">
+
+        
+        <div class="logoLoadAnimationContainer">
+            <svg class="logoLoadAnimation" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" rx="12" fill="#F9FAFC"/>
+                <path d="M21.2754 36.2002H24.6054L16.3854 58.7002H13.0704L15.7854 51.2002L10.4004 36.2002H13.8054L17.3454 46.9252L21.2754 36.2002ZM32.9226 51.5902C31.5426 51.5902 30.2826 51.2352 29.1426 50.5252C28.0126 49.8152 27.1076 48.8652 26.4276 47.6752C25.7576 46.4752 25.4226 45.1502 25.4226 43.7002C25.4226 42.6002 25.6176 41.5752 26.0076 40.6252C26.3976 39.6652 26.9326 38.8252 27.6126 38.1052C28.3026 37.3752 29.1026 36.8052 30.0126 36.3952C30.9226 35.9852 31.8926 35.7802 32.9226 35.7802C34.0726 35.7802 35.1276 36.0202 36.0876 36.5002C37.0476 36.9702 37.8676 37.6252 38.5476 38.4652C39.2276 39.2952 39.7276 40.2552 40.0476 41.3452C40.3676 42.4252 40.4626 43.5752 40.3326 44.7952H28.7676C28.8976 45.4852 29.1476 46.1102 29.5176 46.6702C29.8976 47.2202 30.3776 47.6552 30.9576 47.9752C31.5476 48.2952 32.2026 48.4602 32.9226 48.4702C33.6826 48.4702 34.3726 48.2802 34.9926 47.9002C35.6226 47.5202 36.1376 46.9952 36.5376 46.3252L39.7026 47.0602C39.1026 48.3902 38.1976 49.4802 36.9876 50.3302C35.7776 51.1702 34.4226 51.5902 32.9226 51.5902ZM28.6626 42.4102H37.1826C37.0826 41.6902 36.8276 41.0402 36.4176 40.4602C36.0176 39.8702 35.5126 39.4052 34.9026 39.0652C34.3026 38.7152 33.6426 38.5402 32.9226 38.5402C32.2126 38.5402 31.5526 38.7102 30.9426 39.0502C30.3426 39.3902 29.8426 39.8552 29.4426 40.4452C29.0526 41.0252 28.7926 41.6802 28.6626 42.4102ZM56.3168 41.7952V51.2002H53.1968V42.5602C53.1968 41.8902 53.0318 41.2802 52.7018 40.7302C52.3818 40.1802 51.9468 39.7452 51.3968 39.4252C50.8568 39.0952 50.2468 38.9302 49.5668 38.9302C48.9068 38.9302 48.3018 39.0952 47.7518 39.4252C47.2018 39.7452 46.7618 40.1802 46.4318 40.7302C46.1018 41.2802 45.9368 41.8902 45.9368 42.5602V51.2002H42.8168V36.2002H45.9368V37.7902C46.4568 37.1702 47.0968 36.6802 47.8568 36.3202C48.6168 35.9602 49.4368 35.7802 50.3168 35.7802C51.4268 35.7802 52.4368 36.0502 53.3468 36.5902C54.2568 37.1302 54.9768 37.8552 55.5068 38.7652C56.0468 39.6752 56.3168 40.6852 56.3168 41.7952ZM70.703 28.7002H73.823V51.2002H70.703V48.9952C70.213 49.7752 69.573 50.4052 68.783 50.8852C67.993 51.3552 67.068 51.5902 66.008 51.5902C64.918 51.5902 63.898 51.3852 62.948 50.9752C61.998 50.5652 61.158 50.0002 60.428 49.2802C59.708 48.5502 59.143 47.7102 58.733 46.7602C58.323 45.8102 58.118 44.7902 58.118 43.7002C58.118 42.6102 58.323 41.5902 58.733 40.6402C59.143 39.6802 59.708 38.8402 60.428 38.1202C61.158 37.3902 61.998 36.8202 62.948 36.4102C63.898 36.0002 64.918 35.7952 66.008 35.7952C67.068 35.7952 67.993 36.0352 68.783 36.5152C69.573 36.9852 70.213 37.6052 70.703 38.3752V28.7002ZM66.038 48.5752C66.918 48.5752 67.688 48.3602 68.348 47.9302C69.008 47.4902 69.518 46.9002 69.878 46.1602C70.248 45.4202 70.433 44.6002 70.433 43.7002C70.433 42.7902 70.248 41.9652 69.878 41.2252C69.508 40.4852 68.993 39.9002 68.333 39.4702C67.683 39.0302 66.918 38.8102 66.038 38.8102C65.168 38.8102 64.373 39.0302 63.653 39.4702C62.943 39.9102 62.373 40.5002 61.943 41.2402C61.523 41.9802 61.313 42.8002 61.313 43.7002C61.313 44.6102 61.528 45.4352 61.958 46.1752C62.398 46.9052 62.973 47.4902 63.683 47.9302C64.403 48.3602 65.188 48.5752 66.038 48.5752ZM83.8114 51.5902C82.4314 51.5902 81.1714 51.2352 80.0314 50.5252C78.9014 49.8152 77.9964 48.8652 77.3164 47.6752C76.6464 46.4752 76.3114 45.1502 76.3114 43.7002C76.3114 42.6002 76.5064 41.5752 76.8964 40.6252C77.2864 39.6652 77.8214 38.8252 78.5014 38.1052C79.1914 37.3752 79.9914 36.8052 80.9014 36.3952C81.8114 35.9852 82.7814 35.7802 83.8114 35.7802C85.1914 35.7802 86.4464 36.1352 87.5764 36.8452C88.7164 37.5552 89.6214 38.5102 90.2914 39.7102C90.9714 40.9102 91.3114 42.2402 91.3114 43.7002C91.3114 44.7902 91.1164 45.8102 90.7264 46.7602C90.3364 47.7102 89.7964 48.5502 89.1064 49.2802C88.4264 50.0002 87.6314 50.5652 86.7214 50.9752C85.8214 51.3852 84.8514 51.5902 83.8114 51.5902ZM83.8114 48.4702C84.6414 48.4702 85.3864 48.2502 86.0464 47.8102C86.7064 47.3702 87.2264 46.7902 87.6064 46.0702C87.9964 45.3402 88.1914 44.5502 88.1914 43.7002C88.1914 42.8302 87.9914 42.0302 87.5914 41.3002C87.2014 40.5702 86.6764 39.9902 86.0164 39.5602C85.3564 39.1202 84.6214 38.9002 83.8114 38.9002C82.9914 38.9002 82.2464 39.1202 81.5764 39.5602C80.9164 40.0002 80.3914 40.5852 80.0014 41.3152C79.6214 42.0452 79.4314 42.8402 79.4314 43.7002C79.4314 44.5902 79.6314 45.3952 80.0314 46.1152C80.4314 46.8352 80.9614 47.4102 81.6214 47.8402C82.2914 48.2602 83.0214 48.4702 83.8114 48.4702Z" fill="black"/>
+                <path d="M47.7573 56.4001V66.1201C47.7573 66.2401 47.7633 66.3901 47.7753 66.5701C47.7873 66.7501 47.8173 66.9301 47.8653 67.1101C47.9253 67.2781 48.0093 67.4281 48.1173 67.5601C48.2253 67.6801 48.3753 67.7401 48.5673 67.7401C49.1553 67.7401 49.5873 67.0861 49.8633 65.7781H50.5293C50.3973 66.5341 50.2293 67.1341 50.0253 67.5781C49.8213 68.0101 49.6053 68.3401 49.3773 68.5681C49.1493 68.7961 48.9153 68.9401 48.6753 69.0001C48.4353 69.0721 48.2193 69.1081 48.0273 69.1081C47.7513 69.1081 47.5113 69.0601 47.3073 68.9641C47.1153 68.8681 46.9473 68.7421 46.8033 68.5861C46.6713 68.4301 46.5633 68.2501 46.4793 68.0461C46.3953 67.8421 46.3293 67.6261 46.2813 67.3981C46.1013 67.8661 45.8073 68.2681 45.3993 68.6041C45.0033 68.9401 44.5173 69.1081 43.9413 69.1081C43.5813 69.1081 43.2153 69.0361 42.8433 68.8921C42.4833 68.7481 42.1533 68.5141 41.8533 68.1901C41.5653 67.8541 41.3253 67.4281 41.1333 66.9121C40.9533 66.3841 40.8633 65.7421 40.8633 64.9861C40.8633 64.4341 40.9233 63.8581 41.0433 63.2581C41.1753 62.6581 41.3793 62.1121 41.6553 61.6201C41.9313 61.1281 42.2853 60.7201 42.7173 60.3961C43.1493 60.0721 43.6713 59.9101 44.2833 59.9101C44.4273 59.9101 44.5773 59.9281 44.7333 59.9641C44.9013 59.9881 45.0573 60.0361 45.2013 60.1081C45.3573 60.1801 45.5013 60.2821 45.6333 60.4141C45.7653 60.5341 45.8733 60.6841 45.9573 60.8641V56.6521L47.7573 56.4001ZM44.3913 67.7401C44.5713 67.7401 44.7513 67.6921 44.9313 67.5961C45.1233 67.4881 45.2913 67.3501 45.4353 67.1821C45.5913 67.0021 45.7173 66.7921 45.8133 66.5521C45.9093 66.3121 45.9573 66.0541 45.9573 65.7781V61.6741C45.8733 61.4821 45.7413 61.3081 45.5613 61.1521C45.3933 60.9841 45.1713 60.9001 44.8953 60.9001C44.5113 60.9001 44.1813 61.0321 43.9053 61.2961C43.6293 61.5481 43.4073 61.8721 43.2393 62.2681C43.0713 62.6521 42.9453 63.0781 42.8613 63.5461C42.7893 64.0021 42.7533 64.4401 42.7533 64.8601C42.7533 65.8921 42.8913 66.6301 43.1673 67.0741C43.4553 67.5181 43.8633 67.7401 44.3913 67.7401Z" fill="#039768"/>
+                <path d="M55.4856 62.2501C55.4856 63.0901 55.1376 63.7921 54.4416 64.3561C53.7576 64.9201 52.8036 65.2681 51.5796 65.4001C51.6276 65.8801 51.7116 66.2701 51.8316 66.5701C51.9636 66.8701 52.1196 67.1101 52.2996 67.2901C52.4796 67.4581 52.6836 67.5781 52.9116 67.6501C53.1516 67.7101 53.3976 67.7401 53.6496 67.7401C54.2256 67.7401 54.7656 67.5901 55.2696 67.2901C55.7736 66.9901 56.1816 66.4861 56.4936 65.7781H57.0696C56.9136 66.2221 56.6976 66.6481 56.4216 67.0561C56.1456 67.4521 55.8216 67.8061 55.4496 68.1181C55.0776 68.4181 54.6756 68.6581 54.2436 68.8381C53.8116 69.0181 53.3676 69.1081 52.9116 69.1081C52.4916 69.1081 52.0836 69.0361 51.6876 68.8921C51.3036 68.7481 50.9616 68.5141 50.6616 68.1901C50.3616 67.8541 50.1156 67.4221 49.9236 66.8941C49.7436 66.3661 49.6536 65.7181 49.6536 64.9501C49.6536 64.4461 49.7076 63.9001 49.8156 63.3121C49.9356 62.7241 50.1276 62.1781 50.3916 61.6741C50.6676 61.1701 51.0216 60.7501 51.4536 60.4141C51.8976 60.0781 52.4436 59.9101 53.0916 59.9101C53.3916 59.9101 53.6796 59.9461 53.9556 60.0181C54.2436 60.0781 54.5016 60.1981 54.7296 60.3781C54.9576 60.5461 55.1376 60.7801 55.2696 61.0801C55.4136 61.3801 55.4856 61.7701 55.4856 62.2501ZM51.5616 64.6981C52.4136 64.5661 53.0856 64.2661 53.5776 63.7981C54.0816 63.3301 54.3336 62.7541 54.3336 62.0701C54.3336 61.6141 54.2556 61.2901 54.0996 61.0981C53.9436 60.8941 53.7216 60.7921 53.4336 60.7921C53.1216 60.7921 52.8456 60.9121 52.6056 61.1521C52.3776 61.3921 52.1856 61.7041 52.0296 62.0881C51.8736 62.4601 51.7536 62.8801 51.6696 63.3481C51.5976 63.8041 51.5616 64.2541 51.5616 64.6981Z" fill="#039768"/>
+                <path d="M58.2966 56.4001V66.1201C58.2966 66.2401 58.3026 66.3901 58.3146 66.5701C58.3266 66.7501 58.3566 66.9301 58.4046 67.1101C58.4646 67.2781 58.5486 67.4281 58.6566 67.5601C58.7646 67.6801 58.9146 67.7401 59.1066 67.7401C59.6946 67.7401 60.1266 67.0861 60.4026 65.7781H61.0686C60.9366 66.5341 60.7686 67.1341 60.5646 67.5781C60.3606 68.0101 60.1446 68.3401 59.9166 68.5681C59.6886 68.7961 59.4546 68.9401 59.2146 69.0001C58.9746 69.0721 58.7586 69.1081 58.5666 69.1081C58.1466 69.1081 57.8046 69.0301 57.5406 68.8741C57.2766 68.7061 57.0666 68.4961 56.9106 68.2441C56.7546 67.9921 56.6466 67.7101 56.5866 67.3981C56.5266 67.0861 56.4966 66.7861 56.4966 66.4981V56.6521L58.2966 56.4001Z" fill="#039768"/>
+                <path d="M62.1813 60.0001V66.1201C62.1813 66.2401 62.1873 66.3901 62.1993 66.5701C62.2113 66.7501 62.2413 66.9301 62.2893 67.1101C62.3493 67.2781 62.4333 67.4281 62.5413 67.5601C62.6493 67.6801 62.7993 67.7401 62.9913 67.7401C63.5793 67.7401 64.0113 67.0861 64.2873 65.7781H64.9533C64.8213 66.5341 64.6533 67.1341 64.4493 67.5781C64.2453 68.0101 64.0293 68.3401 63.8013 68.5681C63.5733 68.7961 63.3393 68.9401 63.0993 69.0001C62.8593 69.0721 62.6433 69.1081 62.4513 69.1081C62.0313 69.1081 61.6893 69.0301 61.4253 68.8741C61.1613 68.7061 60.9513 68.4961 60.7953 68.2441C60.6393 67.9921 60.5313 67.7101 60.4713 67.3981C60.4113 67.0861 60.3813 66.7861 60.3813 66.4981V60.0001H62.1813ZM60.0573 57.4081C60.0573 57.0841 60.1713 56.8021 60.3993 56.5621C60.6273 56.3221 60.9093 56.2021 61.2453 56.2021C61.5693 56.2021 61.8513 56.3221 62.0913 56.5621C62.3313 56.8021 62.4513 57.0841 62.4513 57.4081C62.4513 57.7441 62.3313 58.0261 62.0913 58.2541C61.8513 58.4821 61.5693 58.5961 61.2453 58.5961C60.9093 58.5961 60.6273 58.4821 60.3993 58.2541C60.1713 58.0261 60.0573 57.7441 60.0573 57.4081Z" fill="#039768"/>
+                <path d="M70.0617 62.9341C70.0617 63.6181 70.0017 64.3261 69.8817 65.0581C69.7737 65.7781 69.5877 66.4381 69.3237 67.0381C69.0597 67.6381 68.7177 68.1361 68.2977 68.5321C67.8777 68.9161 67.3557 69.1081 66.7317 69.1081C66.4197 69.1081 66.1137 69.0541 65.8137 68.9461C65.5257 68.8381 65.2617 68.6821 65.0217 68.4781C64.7937 68.2741 64.6077 68.0161 64.4637 67.7041C64.3317 67.3921 64.2657 67.0381 64.2657 66.6421V60.0001H66.0657V66.1201C66.0657 66.3241 66.0777 66.5221 66.1017 66.7141C66.1257 66.9061 66.1737 67.0801 66.2457 67.2361C66.3297 67.3801 66.4377 67.5001 66.5697 67.5961C66.7137 67.6921 66.8937 67.7401 67.1097 67.7401C67.4817 67.7401 67.7937 67.6081 68.0457 67.3441C68.2977 67.0681 68.5017 66.7141 68.6577 66.2821C68.8257 65.8501 68.9457 65.3701 69.0177 64.8421C69.0897 64.3021 69.1257 63.7681 69.1257 63.2401C69.1257 62.9041 69.1137 62.5741 69.0897 62.2501C69.0657 61.9141 69.0237 61.6141 68.9637 61.3501C68.9037 61.4101 68.8257 61.4521 68.7297 61.4761C68.6337 61.4881 68.5557 61.4941 68.4957 61.4941C68.2077 61.4941 67.9917 61.3921 67.8477 61.1881C67.7037 60.9841 67.6317 60.7681 67.6317 60.5401C67.6317 60.3001 67.7097 60.0901 67.8657 59.9101C68.0217 59.7181 68.2497 59.6221 68.5497 59.6221C68.7537 59.6221 68.9457 59.6821 69.1257 59.8021C69.3177 59.9221 69.4797 60.1141 69.6117 60.3781C69.7557 60.6301 69.8637 60.9661 69.9357 61.3861C70.0197 61.8061 70.0617 62.3221 70.0617 62.9341Z" fill="#039768"/>
+                <path d="M77.0891 62.2501C77.0891 63.0901 76.7411 63.7921 76.0451 64.3561C75.3611 64.9201 74.4071 65.2681 73.1831 65.4001C73.2311 65.8801 73.3151 66.2701 73.4351 66.5701C73.5671 66.8701 73.7231 67.1101 73.9031 67.2901C74.0831 67.4581 74.2871 67.5781 74.5151 67.6501C74.7551 67.7101 75.0011 67.7401 75.2531 67.7401C75.8291 67.7401 76.3691 67.5901 76.8731 67.2901C77.3771 66.9901 77.7851 66.4861 78.0971 65.7781H78.6731C78.5171 66.2221 78.3011 66.6481 78.0251 67.0561C77.7491 67.4521 77.4251 67.8061 77.0531 68.1181C76.6811 68.4181 76.2791 68.6581 75.8471 68.8381C75.4151 69.0181 74.9711 69.1081 74.5151 69.1081C74.0951 69.1081 73.6871 69.0361 73.2911 68.8921C72.9071 68.7481 72.5651 68.5141 72.2651 68.1901C71.9651 67.8541 71.7191 67.4221 71.5271 66.8941C71.3471 66.3661 71.2571 65.7181 71.2571 64.9501C71.2571 64.4461 71.3111 63.9001 71.4191 63.3121C71.5391 62.7241 71.7311 62.1781 71.9951 61.6741C72.2711 61.1701 72.6251 60.7501 73.0571 60.4141C73.5011 60.0781 74.0471 59.9101 74.6951 59.9101C74.9951 59.9101 75.2831 59.9461 75.5591 60.0181C75.8471 60.0781 76.1051 60.1981 76.3331 60.3781C76.5611 60.5461 76.7411 60.7801 76.8731 61.0801C77.0171 61.3801 77.0891 61.7701 77.0891 62.2501ZM73.1651 64.6981C74.0171 64.5661 74.6891 64.2661 75.1811 63.7981C75.6851 63.3301 75.9371 62.7541 75.9371 62.0701C75.9371 61.6141 75.8591 61.2901 75.7031 61.0981C75.5471 60.8941 75.3251 60.7921 75.0371 60.7921C74.7251 60.7921 74.4491 60.9121 74.2091 61.1521C73.9811 61.3921 73.7891 61.7041 73.6331 62.0881C73.4771 62.4601 73.3571 62.8801 73.2731 63.3481C73.2011 63.8041 73.1651 64.2541 73.1651 64.6981Z" fill="#039768"/>
+                <path d="M79.8821 60.0001V61.5121C80.0261 61.2961 80.1641 61.0921 80.2961 60.9001C80.4401 60.7081 80.5961 60.5401 80.7641 60.3961C80.9321 60.2521 81.1181 60.1381 81.3221 60.0541C81.5261 59.9581 81.7541 59.9101 82.0061 59.9101C82.4141 59.9101 82.7141 60.0181 82.9061 60.2341C83.0981 60.4381 83.1941 60.6901 83.1941 60.9901C83.1941 61.1701 83.1641 61.3201 83.1041 61.4401C83.0441 61.5601 82.9721 61.6561 82.8881 61.7281C82.8041 61.8001 82.7141 61.8541 82.6181 61.8901C82.5221 61.9141 82.4381 61.9261 82.3661 61.9261C82.2581 61.9261 82.1681 61.9021 82.0961 61.8541C82.0361 61.8061 81.9701 61.7581 81.8981 61.7101C81.8381 61.6501 81.7661 61.5961 81.6821 61.5481C81.5981 61.5001 81.4901 61.4761 81.3581 61.4761C81.0821 61.4761 80.8181 61.5721 80.5661 61.7641C80.3141 61.9561 80.0861 62.1601 79.8821 62.3761V69.0001H78.0821V60.0001H79.8821Z" fill="#039768"/>
+                <path d="M90.213 60.0001V70.4221C90.213 70.9861 90.153 71.4601 90.033 71.8441C89.913 72.2401 89.745 72.5581 89.529 72.7981C89.325 73.0501 89.085 73.2301 88.809 73.3382C88.545 73.4461 88.263 73.5001 87.963 73.5001C87.363 73.5001 86.895 73.3261 86.559 72.9781C86.223 72.6421 86.055 72.2281 86.055 71.7361C86.055 71.4241 86.121 71.1421 86.253 70.8901C86.397 70.6381 86.577 70.4041 86.793 70.1881C87.021 69.9841 87.273 69.7981 87.549 69.6301C87.837 69.4741 88.125 69.3361 88.413 69.2161V68.0821C88.173 68.4301 87.897 68.6881 87.585 68.8561C87.285 69.0241 86.979 69.1081 86.667 69.1081C86.319 69.1081 85.989 69.0601 85.677 68.9641C85.365 68.8681 85.095 68.7121 84.867 68.4961C84.639 68.2681 84.459 67.9801 84.327 67.6321C84.195 67.2721 84.129 66.8341 84.129 66.3181V60.0001H85.929V66.1201C85.929 66.7081 86.031 67.1281 86.235 67.3801C86.439 67.6201 86.697 67.7401 87.009 67.7401C87.177 67.7401 87.345 67.6981 87.513 67.6141C87.681 67.5181 87.831 67.3861 87.963 67.2181C88.095 67.0501 88.203 66.8461 88.287 66.6061C88.371 66.3661 88.413 66.0901 88.413 65.7781V60.0001H90.213ZM87.621 72.5641C87.945 72.5641 88.155 72.4381 88.251 72.1861C88.359 71.9461 88.413 71.6161 88.413 71.1961V69.9361C87.813 70.2121 87.387 70.4821 87.135 70.7461C86.883 71.0221 86.757 71.3281 86.757 71.6641C86.757 71.9401 86.829 72.1561 86.973 72.3121C87.129 72.4801 87.345 72.5641 87.621 72.5641Z" fill="#039768"/>
+            </svg>
+        </div>
+
+        <!-- Access pass modal -->
+        <div id="accessPassModal" class="fixed width-100 height-100 to-top to-left z-i full-center blur-behind smooth-300 display-none full-center text-center">
+
+            <div class="absolute width-100 height-100 o-2 bg-primary"></div>
+            <div class="responsive-width-33 bg-white z-2 x-padded rounded display-flex flex-col m-gap">
+                
+                <div onclick="toggleDisplay('#accessPassModal')" class="w-100 flex-row o-6 full-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m124.961-480 299.385 299.193q10.923 11.133 10.865 26.566-.058 15.433-11.173 26.452-11.115 11.019-26.479 11.019-15.363 0-26.443-11.115L66.715-431.986q-10.368-10.36-15.041-22.562Q47-466.75 47-479.952t4.673-25.452q4.673-12.25 15.04-22.617l304.402-304.402q11.115-11.115 26.615-10.961 15.5.154 26.615 11.077 10.923 11.132 10.923 26.566 0 15.433-10.951 26.384L124.961-480Z"/></svg>
+                    Volver atrás
+                </div>
+                <h4 id='workspaceModalIndicator'class="font-400 color-black o-8">Descargá el <a onclick="toggleDisplay('#accessPassModal')" style="color: #039768;" href="https://micmic.shop/partner/src/yendo-partner-plan-inicial.xlsx" download>administrador de carta digital</a> y seguí las instrucciones para su integración.</h4>    
+                <a style="color: #039768;" class="cursor-pointer color-black font-300" target="_blank" href="https://wa.me/5493412293515?text=Hola,%20necesito%20asistencia%20para%20integrar%20mi%20carta.">¿Necesita asistencia?</a>
+            
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div style="background-color: #EAE9EE;" class="display-flex flex-row spaced to-center z-2 sticky to-top land">
+            <div class="color-black">
+                <img width="70px" height="70px" src="https://micmic.shop/src/public/img/logo-yendo-partner.svg" alt="">
+                
+            </div>
+            <div class="display-flex flex-row color-black s-gap to-center overflow-scroll">
+                <svg onclick="toggleDisplay('#accessPassModal')" class="cursor-pointer o-6 color-black" xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="22"><path d="M255.539-108.078q-28.257 0-48.263-20.006-20.005-20.006-20.005-48.263v-370.537q0-28.257 20.005-48.263 20.006-20.005 48.263-20.005h50.116v-78.169q0-73.023 50.769-123.792Q407.193-867.882 480-867.882q72.807 0 123.576 50.769 50.769 50.769 50.769 123.792v78.169h50.116q28.257 0 48.263 20.005 20.005 20.006 20.005 48.263v370.537q0 28.257-20.005 48.263-20.006 20.006-48.263 20.006H255.539Zm0-55.96h448.922q5.385 0 8.846-3.462 3.462-3.462 3.462-8.847v-370.537q0-5.385-3.462-8.847-3.461-3.461-8.846-3.461H255.539q-5.385 0-8.846 3.461-3.462 3.462-3.462 8.847v370.537q0 5.385 3.462 8.847 3.461 3.462 8.846 3.462Zm224.429-130.001q28.14 0 47.874-19.702 19.734-19.701 19.734-47.842t-19.701-47.875q-19.702-19.734-47.843-19.734-28.14 0-47.874 19.702t-19.734 47.842q0 28.141 19.701 47.875 19.702 19.734 47.843 19.734ZM361.615-615.152h236.77v-78.509q0-49.068-34.501-83.665-34.502-34.596-83.789-34.596t-83.883 34.552q-34.597 34.551-34.597 83.91v78.308ZM243.231-164.038v-395.154V-164.038Z"/></svg>
+                <div onclick="clickOnTeller()" class="decoration-none cursor-pointer o-6 color-black font-300">Ayuda</div>
+                <a href="#pricing" class="decoration-none cursor-pointer o-6 color-black font-300">Planes</a>
+                <a target="_blank" href="https://micmic.shop/register.html" class="decoration-none s-padded bg-white color-black rounded font-300 text-center full-center">Registrá tu local</a>
+            </div>
+        </div>
+
+        <!-- Hero -->
+        <div style="background-color: #EAE9EE;" class="display-flex to-center z-1">
+            <div class="display-flex flex-row land to-end flex-end overflow-hidden">
+                <div class="responsive-width-50 display-flex flex-col m-gap">
+                    <h1 style="font-family: 'Urbanist', sans-serif !important;" class="responsive-width-66 z-i color-black font-400 o-8 padded no-padded-top no-padded-bottom no-padded-left">
+                        Tu negocio al siguiente nivel con micmic 
+                        <span style="font-family: 'Lobster Two', cursive; color: #039768;">
+                            partner
+                        </span>
+                    </h1>
+                    <h1 class="z-i width-66 o-6 font-300 font-l">Somos el aliado perfecto para administrar tu local gastronómico u hotelero.</h1>
+                    <div class="display-flex">
+                        <a href="https://wa.me/5493412293515?text=Hola,%20quiero%20hablar%20con%20un%20asesor%20sobre%20yendo%20partner." style="background-color: #039768;" class="z-i decoration-none s-padded bg-tint font-m color-white rounded-s">Empezar ahora</a>
+                    </div>
+                    <br><br>
+                </div>
+                <div style="transform: translateX(120px)" class="width-33 display-flex flex-col to-end s-gap">
+                    <img width="550px" src="../partner/src/img/mockup.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero 2 -->
+        <div class="display-flex z-1 bg-white flex-col m-gap x-padded full-center">
+            <div style="fill: #039768;" class="display-flex flex-wrap width-100 land">
+                <div class="responsive-width-33 display-flex flex-col text-center s-padded to-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M240-80q-50 0-85-35t-35-85v-80q0-17 11.5-28.5T160-320h80v-536q0-7 6-9.5t11 2.5l29 29q6 6 14 6t14-6l32-32q6-6 14-6t14 6l32 32q6 6 14 6t14-6l32-32q6-6 14-6t14 6l32 32q6 6 14 6t14-6l32-32q6-6 14-6t14 6l32 32q6 6 14 6t14-6l32-32q6-6 14-6t14 6l32 32q6 6 14 6t14-6l29-29q5-5 11-2.5t6 9.5v656q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h320q17 0 28.5 11.5T680-280v80q0 17 11.5 28.5T720-160ZM400-680h160q17 0 28.5 11.5T600-640q0 17-11.5 28.5T560-600H400q-17 0-28.5-11.5T360-640q0-17 11.5-28.5T400-680Zm0 120h160q17 0 28.5 11.5T600-520q0 17-11.5 28.5T560-480H400q-17 0-28.5-11.5T360-520q0-17 11.5-28.5T400-560Zm280-40q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/></svg>
+                    <h1 style="font-family: 'Urbanist', sans-serif !important; font-size: 25px;" class="font-400 o-8 padded">Actualiza tu Carta</h1>
+                    <h3 class="o-6 font-300">
+                        Descubre la flexibilidad de un menú digital, cambia platos diariamente, actualiza precios, ofrece sugerencias.
+                    </h3>
+                </div>
+                <div class="responsive-width-33 display-flex flex-col text-center s-padded to-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M480-120q-126 0-223-76.5T131-392q-4-15 6-27.5t27-14.5q16-2 29 6t18 24q24 90 99 147t170 57q117 0 198.5-81.5T760-480q0-117-81.5-198.5T480-760q-69 0-129 32t-101 88h70q17 0 28.5 11.5T360-600q0 17-11.5 28.5T320-560H160q-17 0-28.5-11.5T120-600v-160q0-17 11.5-28.5T160-800q17 0 28.5 11.5T200-760v54q51-64 124.5-99T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-120Zm40-376 100 100q11 11 11 28t-11 28q-11 11-28 11t-28-11L452-452q-6-6-9-13.5t-3-15.5v-159q0-17 11.5-28.5T480-680q17 0 28.5 11.5T520-640v144Z"/></svg>
+                    <h1 style="font-family: 'Urbanist', sans-serif !important; font-size: 25px;" class="font-400 o-8 padded">Optimiza Tiempos</h1>
+                    <h3 class="o-6 font-300">
+                        Agiliza los tiempos de atención, con una plataforma diseñada para que te enfoques en ofrecer un servicio de calidad de forma rápida y efectiva.
+                    </h3>
+                </div>
+                <div class="responsive-width-33 display-flex flex-col text-center s-padded to-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M470-200h-10q-142 0-241-99t-99-241q0-142 99-241t241-99q71 0 132.5 26.5t108 73q46.5 46.5 73 108T800-540q0 134-75.5 249T534-111q-10 5-20 5.5t-18-4.5q-8-5-14-13t-7-19l-5-58Zm90-26q71-60 115.5-140.5T720-540q0-109-75.5-184.5T460-800q-109 0-184.5 75.5T200-540q0 109 75.5 184.5T460-280h100v54Zm-101-95q17 0 29-12t12-29q0-17-12-29t-29-12q-17 0-29 12t-12 29q0 17 12 29t29 12Zm-87-304q11 5 22 .5t18-14.5q9-12 21-18.5t27-6.5q24 0 39 13.5t15 34.5q0 13-7.5 26T480-558q-25 22-37 41.5T431-477q0 12 8.5 20.5T460-448q12 0 20-9t12-21q5-17 18-31t24-25q21-21 31.5-42t10.5-42q0-46-31.5-74T460-720q-32 0-59 15.5T357-662q-6 11-1.5 21.5T372-625Zm88 112Z"/></svg>
+                    <h1 style="font-family: 'Urbanist', sans-serif !important; font-size: 25px;" class="font-400 o-8 padded">Recibe Sugerencias</h1>
+                    <h3 class="o-6 font-300">
+                        Mantenete por delante de la competencia analizando tendencias de ventas y preferencias de clientes en tiempo real, gracias a nuestro botón de sugerencias integrado.
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRICING -->
+        <div id="pricing" style="background-color: #EAE9EE;" class="display-flex z-1 flex-col x-padded">
+            <div class="width-100 display-flex flex-col full-center s-gap padded text-center">
+                <h1 style="font-family: 'Urbanist', sans-serif !important" class="z-i color-black font-400 o-8 padded no-padded-top no-padded-bottom no-padded-left">¡Paga sólo por lo que necesites!</h1>
+                <h3 class="o-6 font-300">Descubre el mejor plan para potenciar tu negocio, al mejor precio.</h3>
+            </div>
+            <div style="fill: #039768;" class="display-flex flex-wrap w-100 land">
+                <div class="responsive-width-33 padded">
+                    <div class="bg-white rounded display-flex flex-col padded s-gap">
+                        <a style="font-family: 'Lobster Two', cursive; background-color: #ffb534;" class="text-center decoration-none s-padded font-xl color-white rounded-s width-100" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848a79019e018a7f75d0130292">Plan Inicial</a>
+                        <div class="display-flex flex-col no-gap">
+                            <h1>$4989<span class="font-l">AR</span></h1>
+                            <h1>$7<span class="font-l">US</span></h1>
+                            <h4 class="font-400">por mes</h4>
+                        </div>
+                        <div class="w-100 border-solid border-black"></div>
+                        <small>
+                            Dale a tus clientes una experiencia excepcional con nuestro <b>Menú Digital Autoadministrable</b>, diseñado para cautivar y deleitar a tus visitantes. Presenta tu carta de manera atractiva y organizada, y <b>optimizá tus tiempos de atención</b>.
+                        </small>
+                    </div>
+                </div>
+                <div class="responsive-width-33 padded">
+                    <div class="bg-white rounded display-flex flex-col padded s-gap">
+                        <a style="font-family: 'Lobster Two', cursive; background-color: #039768;" class="text-center decoration-none s-padded font-xl color-white rounded-s width-100" target="_blank" href="https://wa.me/5493412293515?text=Hola,%20quiero%20hablar%20con%20un%20asesor%20sobre%20yendo%20partner%plan%20partner.">Plan Partner</a>
+                        <div class="display-flex flex-col no-gap">
+                            <h1>$7289<span class="font-l">AR</span></h1>
+                            <h1>$9<span class="font-l">US</span></h1>
+                            <h4 class="font-400">por mes</h4>
+                        </div>
+                        <div class="w-100 border-solid border-black"></div>
+                        <small>
+                            Lleva tu negocio al siguiente nivel con nuestro Plan Partner. Además de nuestro impresionante <b>Menú Digital</b>, obtendrás acceso exclusivo al <b>Botón de Sugerencias</b>, potenciando la participación y mejora del servicio para tus clientes.
+                        </small>
+                    </div>
+                </div>
+                <div class="responsive-width-33 padded">
+                    <div class="bg-grey color-white rounded display-flex flex-col padded s-gap">
+                        <a style="font-family: 'Lobster Two', cursive;" class="bg-black text-center decoration-none s-padded font-xl color-white rounded-s width-100" target="_blank" href="https://wa.me/5493412293515?text=Hola,%20quiero%20hablar%20con%20un%20asesor%20sobre%20yendo%20partner%plan%20premium.">Plan Premium</a>
+                        <div class="display-flex flex-col no-gap">
+                            <h4 class="font-300">DESDE</h4>
+                            <h1>$26.389<span class="font-l">AR</span></h1>
+                            <h1>$35<span class="font-l">US</span></h1>
+                            <h4 class="font-400">por mes</h4>
+                        </div>
+                        <div class="w-100 border-solid border-white"></div>
+                        <small>
+                            Domina tu mercado con nuestro Plan Premium. Obtén todo lo que ofrecen nuestros otros planes, además de la ventaja de un Soporte Multilingüe. Mantente a la vanguardia de la competencia analizando tendencias de ventas, preferencias de clientes y más, en tiempo real. Tu éxito no conoce límites con este plan integral.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTION FLAG -->
+        <div class="display-flex z-1 flex-col bg-white x-padded">
+            <div class="width-100 display-flex flex-col full-center text-center overflow-hidden z-3 x-padded s-gap">
+                <h1 style="font-family: 'Urbanist', sans-serif !important; font-size: 40px;" class="z-i color-black font-400 o-8">Descubrí el poder de micmic</h1>
+                <h3 class="o-6 font-300">Integra tu carta en minutos y experimenta los beneficios de una carta digital.</h3>
+                <a target="_blank" href="https://micmic.shop/register.html" class="decoration-none s-padded bg-black color-white rounded font-l">Registrá tu local</a>
+            </div>
+        </div>
+
+        <!-- FAQS -->
+        <div style="background-color: #EAE9EE;" class="relative display-flex z-1 flex-col m-gap x-padded no-padded-left no-padded-right">
+            <div style="fill: #039768;" class="display-flex flex-wrap width-100 land z-i">
+                <div class="width-100 display-flex flex-col full-center s-gap padded">
+                    
+                    <h1 style="font-family: 'Urbanist', sans-serif !important" class="z-i color-black font-400 o-8 padded no-padded-top no-padded-bottom no-padded-left">Saber más sobre micmic Partner</h1>
+                </div>
+                <div class="responsive-width-50 display-flex flex-col padded s-gap">
+                    <h1 class="font-l">¿Qué es micmic Partner y cómo puede beneficiar a mi negocio gastronómico o hotelero?</h1>
+                    <p class="font-300">
+                        micmic Partner es una plataforma integral diseñada para ser el aliado ideal de los negocios gastronómicos y hoteleros. Nuestra herramienta ofrece un Menú Digital autoadministrable que te permite actualizar tu carta de manera flexible, cambiar platos, ajustar precios y presentar sugerencias fácilmente. Además, proporcionamos un Botón de Sugerencias para fomentar la participación de tus clientes y mejorar tu servicio. Con nuestros planes, puedes personalizar tu experiencia y acceder a análisis en tiempo real para tomar decisiones informadas que impulsen tu éxito en el mercado. micmic Partner es la solución completa para potenciar tu negocio y ofrecer una experiencia excepcional a tus clientes.
+                    </p>
+                </div>
+                <div class="responsive-width-50 display-flex flex-col padded s-gap">
+                    <h1 class="font-l">¿Cómo puedo actualizar mi menú con Yendo Partner?</h1>
+                    <p class="font-300">
+                        Con Yendo Partner, actualizar tu menú es fácil. Nuestra plataforma te permite modificar platos, cambiar precios y añadir sugerencias de forma rápida y sencilla a través de la interfaz de administración en línea. Solo necesitas iniciar sesión en tu cuenta y realizar los cambios que desees.
+                    </p>
+                </div>
+                <div class="responsive-width-50 display-flex flex-col padded s-gap">
+                    <h1 class="font-l">¿Qué diferencia hay entre el Plan Partner y el Plan Premium?</h1>
+                    <p class="font-300">
+                        El Plan Partner ofrece acceso exclusivo al Botón de Sugerencias para potenciar la interacción con tus clientes y mejorar el servicio. Por otro lado, el Plan Premium incluye todo lo del Plan Partner y agrega soporte multilingüe y análisis avanzado para mantenerte a la vanguardia en tendencias y preferencias de los clientes.
+                    </p>
+                </div>
+                <div class="responsive-width-50 display-flex flex-col padded s-gap">
+                    <h1 class="font-l">¿Puedo personalizar el diseño del Menú Digital con Yendo Partner?</h1>
+                    <p class="font-300">
+                        ¡Sí! Con Yendo Partner, puedes personalizar el diseño de tu Menú Digital para que se ajuste a la identidad de tu local. Puedes elegir colores, fuentes y organizar tu menú de la forma que desees para crear una experiencia única y atractiva para tus clientes.
+                    </p>
+                </div>
+                <div class="responsive-width-50 display-flex flex-col padded s-gap">
+                    <h1 class="font-l">¿Cuáles son los métodos de pago disponibles para los planes de Yendo Partner?</h1>
+                    <p class="font-300">
+                        Aceptamos pagos a través de tarjetas de crédito y débito, transferencias bancarias y otros métodos de pago electrónicos seguros. Nuestra plataforma está diseñada para garantizar transacciones seguras y confiables para nuestros clientes.
+                    </p>
+                </div>
+                <div class="responsive-width-50 display-flex flex-col padded s-gap">
+                    <h1 class="font-l">¿Cómo puedo obtener soporte técnico en caso de problemas o consultas?</h1>
+                    <p class="font-300">
+                        Si tienes alguna pregunta, problema técnico o necesitas asistencia, puedes contactar a nuestro equipo de soporte a través del correo electrónico global@micmic.shop o llamando al +5493412293515. Estamos aquí para ayudarte y brindarte soluciones rápidas y efectivas.
+                    </p>
+                </div>
+                <div class="responsive-width-50 display-flex flex-col padded s-gap">
+                    <h1 class="font-l">¿Es posible cambiar de un plan a otro en cualquier momento?</h1>
+                    <p class="font-300">
+                        Sí, puedes cambiar de un plan a otro en cualquier momento según tus necesidades y preferencias. Solo ponte en contacto con nuestro equipo de atención al cliente y estaremos encantados de ayudarte a hacer la transición al plan que mejor se adapte a tus requerimientos empresariales.
+                    </p>
+                </div>
+                <div class="responsive-width-50 display-flex flex-col padded s-gap">
+                    <h1 class="font-l">¿Puedo ver una tienda de ejemplo?</h1>
+                    <p class="font-300">
+                        Viví la experiencia de usuario en
+                        <br>
+                        <a style="color: #039768;" class="font-l" href="https://micmic.shop/partner/demo"> micmic.shop/partner/demo</a>
+                    </p>
+                </div>
+
+                <div class="width-100 display-flex flex-col full-center s-gap x-padded">
+                    <img class="shadow-one rounded" width="100px" src="https://micmic.shop/partner/src/img/support-qr.png" alt="">
+                    <h3 class="o-6 font-300 width-50 text-center">¿Tenés preguntas o necesitas asistencia?</h3>
+                    <a target="_blank" href="https://wa.me/5493412293515?text=Hola,%20quiero%20hablar%20con%20un%20asesor%20sobre%20yendo%20partner." style="background-color: #039768;" class="z-i decoration-none s-padded bg-tint font-l color-white rounded">Hablá con un asesor</a>
+                </div>
+                
+            </div>
+            <div class="width-33 display-flex flex-col to-end s-gap absolute to-right to-bottom">
+                <img width="100%" src="../partner/src/img/partner-hero-cover.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-white display-flex flex-col full-center z-2 m-gap x-padded">
+            <div class="land display-flex flex-wrap m-gap color-black">
+                <a href="#pricing" class="decoration-none color-black">Planes</a>
+                <p onclick="clickOnTeller()" class="cursor-pointer decoration-none color-black">Ayuda</p>
+                <a href="https://www.linkedin.com/company/micmicgo" target="_blank" class="decoration-none color-black">Linkedin</a>
+                <a href="https://wa.me/5493412293515?text=Hola,%20quiero%20hablar%20con%20un%20asesor%20sobre%20yendo%20partner." target="_blank" class="decoration-none color-black">Whatsapp</a>
+            </div>
+            <p class="font-s responsive-width-50 text-center o-6">© 2023 micmic.shop. Reservados todos los derechos. "micmic Partner" y "micmic Delivery" es un servicio ofrecido por Logic Omnipresence a través de micmic.shop y no constituye una marca registrada independiente ni representa una entidad legal separada.</p>
+            
+            <div>
+                Powered by 
+                <a class="decoration-none color-black" href="https://www.linkedin.com/company/logicomnipresence">
+                    <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #7227F5;"></span>
+                    
+                        <b style="font-family: 'Urbanist', sans-serif;">Logic</b>
+                        <span style="font-family: 'Urbanist', sans-serif;">Omnipresence</span>
+                    
+                </a>
+            </div>
+        </div>
+
+        <!-- Whatsapp Button-->
+        <div class="fixed to-bottom to-right padded z-3">
+            <a style="background-color: #1BD03E;" href="https://wa.me/5493412293515" target="_blank" class="decoration-none color-white s-gap display-flex full-center s-padded rounded-max">
+
+                <span> </span>Habla con un asesor
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7204 16.0897C20.6658 16.0635 18.6246 15.0583 18.2618 14.9278C18.1137 14.8746 17.9551 14.8227 17.7864 14.8227C17.5107 14.8227 17.2792 14.96 17.0988 15.2298C16.8949 15.5329 16.2777 16.2545 16.0869 16.47C16.062 16.4985 16.028 16.5325 16.0076 16.5325C15.9894 16.5325 15.6735 16.4024 15.5778 16.3608C13.3881 15.4097 11.726 13.1223 11.4981 12.7366C11.4656 12.6811 11.4642 12.6559 11.4639 12.6559C11.4719 12.6266 11.5456 12.5528 11.5836 12.5147C11.6947 12.4047 11.8152 12.2597 11.9317 12.1194C11.9869 12.0529 12.0422 11.9864 12.0965 11.9237C12.2656 11.7269 12.3408 11.5742 12.4281 11.3973L12.4738 11.3054C12.6869 10.882 12.5049 10.5248 12.4461 10.4094C12.3978 10.3128 11.5359 8.23267 11.4443 8.01412C11.2239 7.48676 10.9327 7.24121 10.5281 7.24121C10.4906 7.24121 10.5281 7.24121 10.3707 7.24785C10.1789 7.25594 9.13483 7.39339 8.6732 7.68439C8.18365 7.99303 7.35547 8.97685 7.35547 10.707C7.35547 12.2642 8.34365 13.7345 8.76792 14.2937C8.77847 14.3078 8.79783 14.3364 8.82592 14.3775C10.4507 16.7504 12.4763 18.5089 14.5297 19.3292C16.5065 20.1188 17.4426 20.2101 17.9747 20.2101H17.9748C18.1985 20.2101 18.3775 20.1926 18.5354 20.177L18.6356 20.1675C19.3185 20.1069 20.8192 19.3293 21.1606 18.3807C21.4295 17.6335 21.5004 16.8171 21.3215 16.5208C21.1989 16.3194 20.9877 16.218 20.7204 16.0897Z" fill="white"/>
+                    <path d="M14.2485 0C6.66525 0 0.495797 6.12309 0.495797 13.6494C0.495797 16.0836 1.14725 18.4665 2.38134 20.5519L0.0192516 27.5196C-0.0247484 27.6495 0.00797888 27.7932 0.10407 27.891C0.173433 27.9618 0.267524 28 0.363615 28C0.400433 28 0.437524 27.9945 0.473706 27.9829L7.73916 25.6742C9.72734 26.7365 11.9744 27.2972 14.2486 27.2972C21.8312 27.2973 28 21.1748 28 13.6494C28 6.12309 21.8312 0 14.2485 0ZM14.2485 24.454C12.1086 24.454 10.036 23.8361 8.25434 22.667C8.19443 22.6276 8.12489 22.6075 8.05489 22.6075C8.01789 22.6075 7.9808 22.6131 7.94471 22.6245L4.30516 23.7815L5.48007 20.3152C5.51807 20.203 5.49907 20.0793 5.42907 19.9836C4.07234 18.1298 3.35516 15.9395 3.35516 13.6494C3.35516 7.69091 8.24189 2.84327 14.2484 2.84327C20.2543 2.84327 25.1404 7.69091 25.1404 13.6494C25.1405 19.6071 20.2544 24.454 14.2485 24.454Z" fill="white"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Feedback button
+
+        <teller 
+            style="bottom: 20px !important; left: 20px !important;"
+            lang="en"
+            supportHours="09:00/13:59(-03:00)"
+            username="Teller by Unirvana"
+            tellerMode="brick"
+            userColor="#039768"
+            theme="light"
+            side="left"
+            borderRadius="25"
+            appearAfter="5"
+            callToAction="¿Necesitas asistencia?"
+            formUrl="https://docs.google.com/forms/d/e/1FAIpQLSdpgab-bhAdoFrIO7hqw2woqA7dIzxNHZa5sXCoMGfHT7NNCg/viewform?usp=pp_url&entry.1085830910=nice&entry.601918770=pepe&entry.1067325052=naranja&entry.52853599=pepe"
+        ></teller>
+
+        -->
+
+        <!-- Scripts
+        <script src="https://cdn.jsdelivr.net/gh/dfralan/Teller@main/teller.js"></script>
+        -->
+        <script src="https://cdn.jsdelivr.net/gh/dfralan/brik@main/brik.js"></script>
+
+    </body>
+
+</html>
